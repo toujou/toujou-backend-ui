@@ -1,0 +1,32 @@
+{
+  "name": "toujou-backend-ui",
+  "version": "1.0.0",
+  "description": "Storybook for toujou's BE UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sb": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toujou/toujou-backend-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toujou/toujou-backend-ui/issues"
+  },
+  "homepage": "https://github.com/toujou/toujou-backend-ui#readme",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.4",
+    "@storybook/addon-essentials": "^8.5.0",
+    "@storybook/blocks": "^8.5.0",
+    "@storybook/test": "^8.5.0",
+    "@storybook/web-components": "^8.5.0",
+    "@storybook/web-components-vite": "^8.5.0",
+    "lit": "^3.2.1",
+    "storybook": "^8.5.0"
+  }
+}
