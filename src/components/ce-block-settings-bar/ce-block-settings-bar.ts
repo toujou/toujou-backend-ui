@@ -3,20 +3,20 @@ import { customElement, property } from 'lit/decorators.js'
 import { CeBlockSettingsBarStyles } from "./ce-block-settings-bar.styles.ts";
 
 export interface CeBlockSettingsBarItem {
-    title: string; // Required
-    value?: string; // Optional
+    title: string;
+    value?: string;
 }
 
 @customElement('toujou-be-ce-block-settings-bar')
 export class CeBlockSettingsBar extends LitElement {
     static styles = [ CeBlockSettingsBarStyles ];
 
-    // The `items` property will be passed as an attribute and will be an array of SettingsBarItem objects.
     @property({ type: Array })
     items: CeBlockSettingsBarItem[] = [];
 
-    // Render the component
     render() {
+        if (!this.items.length) return;
+
         return html`
             <ul class="ce-block-settings-bar__list">
                 ${this.items.map((item, index) => html`

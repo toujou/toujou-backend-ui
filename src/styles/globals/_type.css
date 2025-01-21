@@ -50,3 +50,7 @@ ol {
     line-height: var(--line-height-normal);
     color: var(--tbeui-color-font);
 }
+
+p {
+    margin: 0;
+}
