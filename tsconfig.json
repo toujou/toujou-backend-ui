@@ -21,6 +21,7 @@
         "forceConsistentCasingInFileNames": true,
         "useDefineForClassFields": false,
         "skipLibCheck": true,
+        "allowImportingTsExtensions": true,
         "target": "ES6",
         "baseUrl": ".",
         "types": [
@@ -28,9 +29,8 @@
             "cypress-axe"
         ],
         "paths": {
-            "@/utils/*": [
-                "utils/*"
-            ]
+            "@atoms/*": ["src/components/atoms/*"],
+            "@components/*": ["src/components/*"]
         }
     },
     "include": [

@@ -1,7 +1,15 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import tsConfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
+    plugins: [tsConfigPaths()],
+    resolve: {
+        alias: {
+            '@atoms': '/src/components/atoms',
+            '@components': '/src/components',
+        }
+    },
     build: {
         rollupOptions: {
             input: {

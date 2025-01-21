@@ -1,5 +1,7 @@
 import '../src/styles/storybook-styles.css';
 
+import '../src/components/ce-block-settings-bar/ce-block-settings-bar';
+
 /** @type { import('@storybook/web-components').Preview } */
 const preview = {
     parameters: {

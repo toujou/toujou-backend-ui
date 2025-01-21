@@ -6,6 +6,7 @@
 
 @import './globals/_type.css';
 
+@import './elements/_ce-block.css';
 @import './elements/_page-ce-element.css';
 @import './elements/_page-ce-element-body.css';
 @import './elements/_page-ce-element-header.css';

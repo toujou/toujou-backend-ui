@@ -1,3 +1,9 @@
+* {
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 h1,
 h2,
 h3,
@@ -7,7 +13,32 @@ h6 {
     font-family: var(--font-family-headline);
     font-weight: var(--font-weight-headline);
     line-height: var(--line-height-s);
-    color: var(--tbeui-color-text);
+    color: var(--tbeui-color-font);
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--font-size-xxxl);
+}
+
+h2 {
+    font-size: var(--font-size-xxl);
+}
+
+h3 {
+    font-size: var(--font-size-xl);
+}
+
+h4 {
+    font-size: var(--font-size-l);
+}
+
+h5 {
+    font-size: var(--font-size-m);
+}
+
+h6 {
+    font-size: var(--font-size-normal);
 }
 
 p,
@@ -15,6 +46,7 @@ ul,
 ol {
     font-family: var(--font-family-text);
     font-weight: var(--font-weight-text-normal);
+    font-size: var(--font-size-normal);
     line-height: var(--line-height-normal);
-    color: var(--tbeui-color-text);
+    color: var(--tbeui-color-font);
 }
