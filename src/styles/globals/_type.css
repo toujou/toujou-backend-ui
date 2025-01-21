@@ -1,0 +1,20 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-headline);
+    font-weight: var(--font-weight-headline);
+    line-height: var(--line-height-s);
+    color: var(--tbeui-color-text);
+}
+
+p,
+ul,
+ol {
+    font-family: var(--font-family-text);
+    font-weight: var(--font-weight-text-normal);
+    line-height: var(--line-height-normal);
+    color: var(--tbeui-color-text);
+}

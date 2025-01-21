@@ -1,0 +1,26 @@
+.page-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "header"
+        "content";
+    grid-gap: var(--spacing-normal);
+    border-radius: var(--border-radius-s);
+    background-color: var(--tbeui-color-light-grey);
+    padding: var(--spacing-normal);
+}
+
+.page-column__header {
+    grid-area: header;
+}
+
+.page-column__header-name {
+    font-family: var(--font-family-headline);
+    font-weight: var(--font-weight-headline);
+    margin: 0;
+}
+
+.page-column__content {
+    grid-area: content;
+}

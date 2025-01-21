@@ -1,3 +1,12 @@
-@import './variables/colors.css';
+@import './variables/_border-radius.css';
+@import './variables/_box-shadow.css';
+@import './variables/_colors.css';
+@import './variables/_spacing.css';
+@import './variables/_type.css';
 
-@import './globals/type.css';
+@import './globals/_type.css';
+
+@import './elements/_page-ce-element.css';
+@import './elements/_page-ce-element-body.css';
+@import './elements/_page-ce-element-header.css';
+@import './elements/_page-column.css';

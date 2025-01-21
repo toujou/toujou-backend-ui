@@ -6,6 +6,7 @@
   "scripts": {
     "build:webcomponents": "vite build --config vite.config.ts",
     "build:css": "postcss ./src/styles/toujou-backend-ui.css -d ./dist/css/",
+    "build": "npm run build:css && npm run build:webcomponents",
     "sb": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

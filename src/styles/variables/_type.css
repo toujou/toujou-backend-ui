@@ -1,0 +1,11 @@
+:root {
+    --font-family-text: "Roboto", sans-serif;
+    --font-family-headline: "Roboto", sans-serif;
+
+    --font-weight-text-normal: 400;
+    --font-weight-text-bold: 700;
+    --font-weight-headline: 700;
+
+    --line-height-normal: 1.4;
+    --line-height-s: 1.2;
+}
