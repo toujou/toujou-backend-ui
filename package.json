@@ -4,7 +4,8 @@
   "description": "Storybook for toujou's BE UI",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:webcomponents": "vite build --config vite.config.ts",
+    "build:css": "postcss ./src/styles/toujou-backend-ui.css -d ./dist/css/",
     "sb": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -26,7 +27,15 @@
     "@storybook/test": "^8.5.0",
     "@storybook/web-components": "^8.5.0",
     "@storybook/web-components-vite": "^8.5.0",
+    "@types/node": "^22.10.7",
     "lit": "^3.2.1",
-    "storybook": "^8.5.0"
+    "storybook": "^8.5.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0"
   }
 }
