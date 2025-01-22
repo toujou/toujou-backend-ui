@@ -37,6 +37,10 @@ export const PageCeElementStyles = css`
         --page-ce-element-grid-template-columns: 1fr 1fr 1fr;
     }
 
+    :host([column-layout="25-25-25-25"]) {
+        --page-ce-element-grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
     .page-ce-element-header {
         grid-area: header;
         padding: var(--page-ce-element-padding) var(--page-ce-element-padding) 0;

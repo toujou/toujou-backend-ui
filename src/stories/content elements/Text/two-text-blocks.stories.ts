@@ -1,6 +1,7 @@
 import { html } from 'lit';
 import { Meta, StoryFn } from "@storybook/web-components";
 import { CeBlockSettingsBarItem } from "../../../components/ce-block-settings-bar/ce-block-settings-bar";
+import { createTextBlock } from "../../molecules/text-block.molecule";
 
 interface TwoTextBlocksProps {
     /** The text to display in the component */
@@ -40,20 +41,14 @@ const Template: StoryFn<TwoTextBlocksProps> = (args: TwoTextBlocksProps) => {
                 <p class="page-column__header-name">Content area</p>
             </toujou-be-page-column-header>
             <toujou-bg-page-column-content class="page-column__content">
-                <toujou-be-page-ce-element class="page-ce-element" .elementSettings="${elementSettings}" header-text="Two text blocks" column-layout="${args.layout}">
-                    <toujou-be-page-ce-block class="ce-block" slot="body">
-                        <slot name="content" slot="content">
-                            <p>${args.textOne}</p>
-                        </slot>
-                        <toujou-be-ce-block-settings-bar slot="settings-bar" class="ce-block-settings-bar" .items="${textSettings}"></toujou-be-ce-block-settings-bar>
-                    </toujou-be-page-ce-block>
-
-                    <toujou-be-page-ce-block class="ce-block" slot="body">
-                        <slot name="content" slot="content">
-                            <p>${args.textTwo}</p>
-                        </slot>
-                        <toujou-be-ce-block-settings-bar slot="settings-bar" class="ce-block-settings-bar" .items="${textSettings}"></toujou-be-ce-block-settings-bar>
-                    </toujou-be-page-ce-block>
+                <toujou-be-page-ce-element
+                    class="page-ce-element"
+                    .elementSettings="${elementSettings}"
+                    header-text="Two text blocks"
+                    column-layout="${args.layout}"
+                >
+                    ${createTextBlock(args.textOne, textSettings)}
+                    ${createTextBlock(args.textTwo, textSettings)}
                 </toujou-be-page-ce-element>
             </toujou-bg-page-column-content>
         </toujou-be-page-column>

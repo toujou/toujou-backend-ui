@@ -23,4 +23,7 @@
 
 .page-column__content {
     grid-area: content;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-normal);
 }
