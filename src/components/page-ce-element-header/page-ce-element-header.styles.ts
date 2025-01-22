@@ -6,7 +6,7 @@ export const PageCeElementHeaderStyles = css`
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        gap: var(--spacing-normal);
+        gap: var(--spacing-s);
     }
 
     .page-ce-element-header__left {
@@ -33,7 +33,7 @@ export const PageCeElementHeaderStyles = css`
         list-style: none;
         display: flex;
         flex-flow: row nowrap;
-        grid-gap: var(--spacing-xs);
+        grid-gap: var(--spacing-normal);
     }
 
 `;

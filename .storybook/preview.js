@@ -1,7 +1,7 @@
 import '../src/styles/storybook-styles.css';
 
-import '../src/components/fake-icon/fake-icon';
-
+import '../src/components/ce-block-icon/ce-block-icon';
+import '../src/components/ce-block-figure-group/ce-block-figure-group';
 import '../src/components/ce-block-settings-bar/ce-block-settings-bar';
 import '../src/components/page-ce-block/page-ce-block';
 import '../src/components/page-ce-element/page-ce-element';

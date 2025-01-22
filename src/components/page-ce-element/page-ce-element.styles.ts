@@ -2,7 +2,7 @@ import { css } from 'lit';
 
 export const PageCeElementStyles = css`
     :host {
-        --page-ce-element-padding: var(--spacing-s);
+        --page-ce-element-padding: var(--spacing-normal);
         --page-ce-element-grid-template-columns: 1fr;
 
         display: grid;
@@ -12,7 +12,7 @@ export const PageCeElementStyles = css`
             "header"
             "body"
             "settings-bar";
-        grid-gap: var(--spacing-s);
+        grid-gap: var(--page-ce-element-padding);
         height: fit-content;
         background-color: var(--tbeui-color-white);
         padding: 0;
@@ -46,7 +46,7 @@ export const PageCeElementStyles = css`
         grid-area: body;
         display: grid;
         grid-template-columns: var(--page-ce-element-grid-template-columns);
-        grid-gap: var(--spacing-s);
+        grid-gap: var(--page-ce-element-padding);
         padding: 0 var(--page-ce-element-padding);
     }
 

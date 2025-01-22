@@ -13,22 +13,25 @@ export class PageCeElementHeader extends LitElement {
         return html`
             <ul class="page-ce-element-header__left">
                 <li class="page-ce-element-header__left-item">
-                    <fake-icon class="fake-icon"></fake-icon>
+                    <toujou-be-ce-block-icon icon-name="content"></toujou-be-ce-block-icon>
                 </li>
                 <li class="page-ce-element-header__left-item">
-                    <fake-icon class="fake-icon"></fake-icon>
+                    <toujou-be-ce-block-icon icon-name="flag-de" is-color-icon></toujou-be-ce-block-icon>
                 </li>
             </ul>
             <p class="page-ce-element-header__title">${this.headerText}</p>
             <ul class="page-ce-element-header__right">
                 <li class="page-ce-element-header__right-item">
-                    <fake-icon class="fake-icon"></fake-icon>
+                    <toujou-be-ce-block-icon icon-name="pencil"></toujou-be-ce-block-icon>
                 </li>
                 <li class="page-ce-element-header__right-item">
-                    <fake-icon class="fake-icon"></fake-icon>
+                    <toujou-be-ce-block-icon icon-name="toggle-switch"></toujou-be-ce-block-icon>
                 </li>
                 <li class="page-ce-element-header__right-item">
-                    <fake-icon class="fake-icon"></fake-icon>
+                    <toujou-be-ce-block-icon icon-name="trash"></toujou-be-ce-block-icon>
+                </li>
+                <li class="page-ce-element-header__right-item">
+                    <toujou-be-ce-block-icon icon-name="dots-vertical"></toujou-be-ce-block-icon>
                 </li>
             </ul>
         `;

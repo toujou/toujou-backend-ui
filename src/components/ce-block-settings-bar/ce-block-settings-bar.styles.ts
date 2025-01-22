@@ -17,7 +17,7 @@ export const CeBlockSettingsBarStyles = css`
     .ce-block-settings-bar__list {
         list-style: none;
         margin: 0;
-        padding: var(--spacing-s);
+        padding: var(--spacing-s) var(--spacing-normal);
         display: flex;
         flex-flow: row wrap;
         gap: var(--spacing-s);

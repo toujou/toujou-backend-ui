@@ -1,0 +1,10 @@
+:root {
+    --tbeui-icon-content: url('../assets/icons/content.svg');
+    --tbeui-icon-dots-vertical: url('../assets/icons/dots-vertical.svg');
+    --tbeui-icon-pencil: url('../assets/icons/pencil.svg');
+    --tbeui-icon-toggle-switch: url('../assets/icons/toggle-switch.svg');
+    --tbeui-icon-trash: url('../assets/icons/trash.svg');
+
+    /* flags */
+    --tbeui-icon-flag-de: url('../assets/icons/flag-de.svg');
+}
