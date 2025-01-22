@@ -1,5 +1,6 @@
 import '../src/styles/storybook-styles.css';
 
+import '../src/components/be-button/be-button';
 import '../src/components/ce-block-icon/ce-block-icon';
 import '../src/components/ce-block-figure-group/ce-block-figure-group';
 import '../src/components/ce-block-settings-bar/ce-block-settings-bar';

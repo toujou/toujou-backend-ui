@@ -13,6 +13,16 @@ export default {
     component: 'text',
 } as Meta<PageProps>;
 
+function createNewContentButton() {
+    return html`
+        <toujou-be-button
+            icon-name="plus"
+            button-size="s"
+            is-centered
+        >Create new content</toujou-be-button>
+    `;
+}
+
 const Template:StoryFn<PageProps> = (args: PageProps) => {
     const textSettings: CeBlockSettingsBarItem[] = [
         { title: 'Some settings', value: 'Some value' },
@@ -30,6 +40,8 @@ const Template:StoryFn<PageProps> = (args: PageProps) => {
                 <p class="page-column__header-name">Content area</p>
             </toujou-be-page-column-header>
             <toujou-bg-page-column-content class="page-column__content">
+                ${createNewContentButton()}
+
                 <toujou-be-page-ce-element
                     class="page-ce-element"
                     .elementSettings="${elementSettings}"
@@ -42,6 +54,8 @@ const Template:StoryFn<PageProps> = (args: PageProps) => {
                     ${createTextBlock(args.text, textSettings)}
                 </toujou-be-page-ce-element>
 
+                ${createNewContentButton()}
+
                 <toujou-be-page-ce-element
                     class="page-ce-element"
                     .elementSettings="${elementSettings}"
@@ -49,6 +63,8 @@ const Template:StoryFn<PageProps> = (args: PageProps) => {
                 >
                     ${createTextBlock(args.text, textSettings)}
                 </toujou-be-page-ce-element>
+
+                ${createNewContentButton()}
 
                 <toujou-be-page-ce-element
                     class="page-ce-element"
@@ -59,6 +75,8 @@ const Template:StoryFn<PageProps> = (args: PageProps) => {
                     ${createTextBlock(args.text, textSettings)}
                     ${createTextBlock(args.text, textSettings)}
                 </toujou-be-page-ce-element>
+
+                ${createNewContentButton()}
             </toujou-bg-page-column-content>
         </toujou-be-page-column>
     `;

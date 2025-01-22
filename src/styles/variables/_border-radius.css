@@ -1,4 +1,5 @@
 :root {
     --border-radius-normal: .5rem;
     --border-radius-s: .25rem;
+    --border-radius-xs: .175rem;
 }
