@@ -5,6 +5,7 @@ export const PageCeBlockStyles = css`
         --ce-block-border: 1px solid var(--tbeui-color-middle-grey);
 
         display: block;
+        height: fit-content;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         border: var(--ce-block-border);

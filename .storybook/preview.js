@@ -7,25 +7,30 @@ import '../src/components/page-ce-block/page-ce-block';
 import '../src/components/page-ce-element/page-ce-element';
 import '../src/components/page-ce-element-header/page-ce-element-header';
 
-/** @type { import('@storybook/web-components').Preview } */
-const preview = {
-    parameters: {
-        backgrounds: {
-            default: 'be-column-bg',
-            values: [
-                {
-                    name: 'be-column-bg',
-                    value: 'var(--tbeui-color-white)'
-                }
-            ]
-        },
-        controls: {
-            matchers: {
-                color: /(background|color)$/i,
-                date: /Date$/i,
-            },
+export const parameters = {
+    backgrounds: {
+        default: 'be-column-bg',
+        values: [
+            {
+                name: 'be-column-bg',
+                value: 'var(--tbeui-color-white)'
+            }
+        ]
+    },
+    controls: {
+        matchers: {
+            color: /(background|color)$/i,
+            date: /Date$/i,
         },
     },
-};
-
-export default preview;
+    options: {
+        storySort: {
+            order: [
+                'Content Elements', // First level of grouping
+                ['Text Elements',
+                    ['Text', 'Two Text Blocks', 'Three Text Blocks', 'Four Text Blocks']
+                ],
+            ],
+        },
+    }
+}

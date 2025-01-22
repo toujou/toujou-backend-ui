@@ -7,7 +7,6 @@ export default {
     argTypes: {},
 } as Meta;
 
-// Template for the story
 const Template: StoryFn = () => {
     const testSettings: CeBlockSettingsBarItem[] = [
         { title: 'Item One', value: 'Value One' },
@@ -18,6 +17,4 @@ const Template: StoryFn = () => {
     return html`<toujou-be-ce-block-settings-bar .items="${testSettings}"></toujou-be-ce-block-settings-bar>`;
 };
 
-// Export the default story
-export const Default = Template.bind({});
-Default.storyName = 'Default Settings Bar';
+export const SettingsBar = Template.bind({});

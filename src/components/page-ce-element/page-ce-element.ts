@@ -11,17 +11,15 @@ export class PageCeElement extends LitElement {
     headerText: string = '';
 
     @property({ type: Array })
-    settingsItems: CeBlockSettingsBarItem[] = [];
+    elementSettings: CeBlockSettingsBarItem[] = [];
 
     render() {
         return html`
             <toujou-be-page-ce-element-header class="page-ce-element-header" header-text="${this.headerText}"></toujou-be-page-ce-element-header>
-            <toujou-be-page-ce-element-body class="page-ce-element__body">
-                <toujou-be-page-ce-block class="ce-block">
-                    <slot name="content" slot="content"></slot>
-                    <toujou-be-ce-block-settings-bar slot="settings-bar" class="ce-block-settings-bar" .items="${this.settingsItems}"></toujou-be-ce-block-settings-bar>
-                </toujou-be-page-ce-block>
+            <toujou-be-page-ce-element-body class="page-ce-element-body">
+                <slot name="body"></slot>
             </toujou-be-page-ce-element-body>
+            <toujou-be-ce-block-settings-bar class="ce-block-settings-bar" .items="${this.elementSettings}"></toujou-be-ce-block-settings-bar>
         `;
     }
 }

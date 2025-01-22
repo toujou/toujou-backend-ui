@@ -13,12 +13,10 @@ export default {
     argTypes: {
         text: {
             name: 'Text',
-            description: 'The text content to display inside the headline.',
             control: 'text',
         },
         tag: {
             name: 'Tag',
-            description: 'The HTML heading tag to use (e.g., h1, h2, etc.).',
             control: { type: 'inline-radio' },
             options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
         },
