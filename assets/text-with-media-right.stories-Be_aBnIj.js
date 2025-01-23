@@ -1,0 +1,69 @@
+import{x as c}from"./lit-element-B4HGITLH.js";import{c as r}from"./text-block.molecule-DQAp0WAw.js";import{c as s}from"./media-block.molecule-CU4WOO-T.js";const h={title:"Content Elements/Text Elements/Text With Media Right",component:"text",argTypes:{text:{control:"text"}}},u=i=>{const n=[{title:"Some settings",value:"Some value"},{title:"Another setting"}],l=[{title:"crop",label:"Cropped image",iconName:"crop"},{title:"lightbox",label:"Click to enlarge",iconName:"eye"},{title:"link",label:"Image has a link",iconName:"link"},{title:"a11y-error",label:"Image has some accessibility errors",iconName:"a11y",isWarning:!0}];return c`
+        <toujou-be-page-column class="page-column">
+            <toujou-be-page-column-header class="page-column__header">
+                <p class="page-column__header-name">Content area</p>
+            </toujou-be-page-column-header>
+            <toujou-bg-page-column-content class="page-column__content">
+                <toujou-be-page-ce-element
+                    class="page-ce-element"
+                    .elementSettings="${[{title:"Lightbox"},{title:"Autoslide",value:"6s"},{title:"Secondary divider"}]}"
+                    header-text="Text with media right"
+                    column-layout="66-33"
+                >
+                    ${r(i.text,n)}
+                    ${s("16-9",l)}
+                </toujou-be-page-ce-element>
+            </toujou-bg-page-column-content>
+        </toujou-be-page-column>
+    `},e=u.bind({});e.args={text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."};var t,o,a;e.parameters={...e.parameters,docs:{...(t=e.parameters)==null?void 0:t.docs,source:{originalSource:`(args: TextWithMediaRightProps) => {
+  const textSettings: CeBlockSettingsBarItem[] = [{
+    title: 'Some settings',
+    value: 'Some value'
+  }, {
+    title: 'Another setting'
+  }];
+  const figureSettings: CeBlockFigureGroupSetting[] = [{
+    title: 'crop',
+    label: 'Cropped image',
+    iconName: 'crop'
+  }, {
+    title: 'lightbox',
+    label: 'Click to enlarge',
+    iconName: 'eye'
+  }, {
+    title: 'link',
+    label: 'Image has a link',
+    iconName: 'link'
+  }, {
+    title: 'a11y-error',
+    label: 'Image has some accessibility errors',
+    iconName: 'a11y',
+    isWarning: true
+  }];
+  const elementSettings: CeBlockSettingsBarItem[] = [{
+    title: 'Lightbox'
+  }, {
+    title: 'Autoslide',
+    value: '6s'
+  }, {
+    title: 'Secondary divider'
+  }];
+  return html\`
+        <toujou-be-page-column class="page-column">
+            <toujou-be-page-column-header class="page-column__header">
+                <p class="page-column__header-name">Content area</p>
+            </toujou-be-page-column-header>
+            <toujou-bg-page-column-content class="page-column__content">
+                <toujou-be-page-ce-element
+                    class="page-ce-element"
+                    .elementSettings="\${elementSettings}"
+                    header-text="Text with media right"
+                    column-layout="66-33"
+                >
+                    \${createTextBlock(args.text, textSettings)}
+                    \${createMediaBlock('16-9', figureSettings)}
+                </toujou-be-page-ce-element>
+            </toujou-bg-page-column-content>
+        </toujou-be-page-column>
+    \`;
+}`,...(a=(o=e.parameters)==null?void 0:o.docs)==null?void 0:a.source}}};const b=["TextWithMediaRight"];export{e as TextWithMediaRight,b as __namedExportsOrder,h as default};
