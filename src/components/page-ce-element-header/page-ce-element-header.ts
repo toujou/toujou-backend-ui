@@ -13,7 +13,7 @@ export class PageCeElementHeader extends LitElement {
         return html`
             <ul class="page-ce-element-header__left">
                 <li class="page-ce-element-header__left-item">
-                    <toujou-be-ce-block-icon icon-name="content"></toujou-be-ce-block-icon>
+                    <toujou-be-ce-block-icon icon-name="content" icon-color="font-light"></toujou-be-ce-block-icon>
                 </li>
                 <li class="page-ce-element-header__left-item">
                     <toujou-be-ce-block-icon icon-name="flag-de" is-color-icon></toujou-be-ce-block-icon>

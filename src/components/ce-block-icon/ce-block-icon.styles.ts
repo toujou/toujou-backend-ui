@@ -29,6 +29,14 @@ export const CeBlockIconStyles = css`
         --icon-size: var(--font-size-normal);
     }
 
+    :host([icon-color="background"]) {
+        --icon-color: var(--tbeui-color-white);
+    }
+
+    :host([icon-color="font-light"]) {
+        --icon-color: var(--tbeui-color-font-light);
+    }
+
     .icon {
         display: block;
         height: 100%;

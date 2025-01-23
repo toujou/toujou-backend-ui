@@ -3,6 +3,7 @@ import { css } from 'lit';
 export const PageCeBlockStyles = css`
     :host {
         --ce-block-border: 1px solid var(--tbeui-color-middle-grey);
+        --ce-block-content-padding: var(--spacing-s);
 
         display: block;
         height: fit-content;
@@ -13,9 +14,13 @@ export const PageCeBlockStyles = css`
         overflow: hidden;
     }
 
+    :host([no-padding]) {
+        --ce-block-content-padding: 0;
+    }
+
     .ce-block__content {
         display: block;
-        padding: var(--spacing-s);
+        padding: var(--ce-block-content-padding);
     }
 
     .ce-block__content > *:first-child {
