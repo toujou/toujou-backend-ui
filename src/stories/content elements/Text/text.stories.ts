@@ -36,7 +36,7 @@ const Template: StoryFn<TextProps> = (args: TextProps) => {
                 <toujou-be-page-ce-element
                     class="page-ce-element"
                     .elementSettings="${elementSettings}"
-                    header-text="Text element!!!"
+                    header-text="Text element"
                 >
                     ${createTextBlock(args.text, textSettings)}
                 </toujou-be-page-ce-element>
