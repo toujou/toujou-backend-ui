@@ -6,5 +6,9 @@ const config = {
         name: "@storybook/web-components-vite",
         options: {},
     },
+    staticDirs: [{
+        from: "../assets/icons",
+        to: "assets/icons",
+    }],
 };
 export default config;
