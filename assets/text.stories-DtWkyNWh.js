@@ -7,7 +7,7 @@ import{x as l}from"./lit-element-B4HGITLH.js";import{c as s}from"./text-block.mo
                 <toujou-be-page-ce-element
                     class="page-ce-element"
                     .elementSettings="${[{title:"Publish date",value:"01.01.2025"},{title:"Primary divider"}]}"
-                    header-text="Text element!!!"
+                    header-text="Text element"
                 >
                     ${s(n.text,u)}
                 </toujou-be-page-ce-element>
@@ -35,7 +35,7 @@ import{x as l}from"./lit-element-B4HGITLH.js";import{c as s}from"./text-block.mo
                 <toujou-be-page-ce-element
                     class="page-ce-element"
                     .elementSettings="\${elementSettings}"
-                    header-text="Text element!!!"
+                    header-text="Text element"
                 >
                     \${createTextBlock(args.text, textSettings)}
                 </toujou-be-page-ce-element>
