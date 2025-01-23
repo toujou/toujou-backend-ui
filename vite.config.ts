@@ -34,4 +34,5 @@ export default defineConfig({
         },
         outDir: 'dist', // Output directory for our components
     },
+    base: '/toujou-backend-ui/',
 });

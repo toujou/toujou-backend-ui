@@ -11,7 +11,7 @@
     "build:sb": "storybook build",
     "build:fix": "sh shell-scripts/sb-postbuild.sh",
     "postbuild:sb": "npm run build:fix",
-    "deploy:sb": "gh-pages -d storybook-static",
+    "deploy:sb": "gh-pages -d storybook-static --dotfiles",
     "deploy:full": "npm run build && npm run build:sb && npm run deploy:sb"
   },
   "repository": {
