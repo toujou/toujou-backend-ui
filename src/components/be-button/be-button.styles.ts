@@ -8,7 +8,6 @@ export const BeButtonStyles = css`
         --button-background-color: transparent;
         --button-border-color: var(--tbeui-color-middle-grey);
 
-
         height: fit-content;
         width: fit-content;
     }
@@ -44,5 +43,4 @@ export const BeButtonStyles = css`
         --button-background-color: var(--tbeui-color-middle-grey);
         --button-border-color: var(--tbeui-color-font-dark);
     }
-
 `;

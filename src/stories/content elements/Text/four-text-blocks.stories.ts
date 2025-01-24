@@ -1,10 +1,8 @@
 import { html } from 'lit';
 import { Meta, StoryFn } from "@storybook/web-components";
 import { CeBlockSettingsBarItem } from "../../../components/ce-block-settings-bar/ce-block-settings-bar";
-import { createTextBlock } from "../../molecules/text-block.molecule";
 
 interface FourTextBlocksProps {
-    /** The text to display in the component */
     textOne: string;
     textTwo: string;
     textThree: string;
@@ -27,17 +25,17 @@ export default {
     },
 } as Meta<FourTextBlocksProps>;
 
+const textSettings: CeBlockSettingsBarItem[] = [
+    { title: 'Some settings', value: 'Some value' },
+    { title: 'Another setting' },
+];
+
+const elementSettings: CeBlockSettingsBarItem[] = [
+    { title: 'Publish date', value: '01.01.2025' },
+    { title: 'Primary divider' },
+];
+
 const Template: StoryFn<FourTextBlocksProps> = (args: FourTextBlocksProps) => {
-    const textSettings: CeBlockSettingsBarItem[] = [
-        { title: 'Some settings', value: 'Some value' },
-        { title: 'Another setting' },
-    ];
-
-    const elementSettings: CeBlockSettingsBarItem[] = [
-        { title: 'Publish date', value: '01.01.2025' },
-        { title: 'Primary divider' },
-    ];
-
     return html`
         <toujou-be-page-column class="page-column">
             <toujou-be-page-column-header class="page-column__header">
@@ -50,10 +48,33 @@ const Template: StoryFn<FourTextBlocksProps> = (args: FourTextBlocksProps) => {
                     header-text="Four text blocks"
                     column-layout="${args.layout}"
                 >
-                    ${createTextBlock(args.textOne, textSettings)}
-                    ${createTextBlock(args.textTwo, textSettings)}
-                    ${createTextBlock(args.textThree, textSettings)}
-                    ${createTextBlock(args.textFour, textSettings)}
+                    <toujou-be-text-block
+                        slot="body"
+                        .blockSettings="${textSettings}"
+                    >
+                        <p slot="content">${args.textOne}</p>
+                    </toujou-be-text-block>
+
+                    <toujou-be-text-block
+                        slot="body"
+                        .blockSettings="${textSettings}"
+                    >
+                        <p slot="content">${args.textTwo}</p>
+                    </toujou-be-text-block>
+
+                    <toujou-be-text-block
+                        slot="body"
+                        .blockSettings="${textSettings}"
+                    >
+                        <p slot="content">${args.textThree}</p>
+                    </toujou-be-text-block>
+
+                    <toujou-be-text-block
+                        slot="body"
+                        .blockSettings="${textSettings}"
+                    >
+                        <p slot="content">${args.textFour}</p>
+                    </toujou-be-text-block>
                 </toujou-be-page-ce-element>
             </toujou-bg-page-column-content>
         </toujou-be-page-column>

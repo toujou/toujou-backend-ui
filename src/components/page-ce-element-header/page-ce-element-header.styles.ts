@@ -35,5 +35,4 @@ export const PageCeElementHeaderStyles = css`
         flex-flow: row nowrap;
         grid-gap: var(--spacing-normal);
     }
-
 `;

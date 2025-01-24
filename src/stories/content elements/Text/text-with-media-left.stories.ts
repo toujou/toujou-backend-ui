@@ -15,47 +15,48 @@ export default {
     },
 } as Meta<TextWithMediaLeftProps>;
 
+const textSettings: CeBlockSettingsBarItem[] = [
+    { title: 'Some settings', value: 'Some value' },
+    { title: 'Another setting' },
+];
+
+const figureSettings: CeBlockFigureGroupSetting[] = [
+    {
+        title: 'crop',
+        label: 'Cropped image',
+        iconName: 'crop'
+    },
+    {
+        title: 'lightbox',
+        label: 'Click to enlarge',
+        iconName: 'eye'
+    },
+    {
+        title: 'link',
+        label: 'Image has a link',
+        iconName: 'link'
+    },
+    {
+        title: 'a11y-error',
+        label: 'Image has some accessibility errors',
+        iconName: 'a11y',
+        isWarning: true
+    },
+];
+
+const elementSettings: CeBlockSettingsBarItem[] = [
+    { title: 'Lightbox' },
+    { title: 'Autoslide', value: '6s' },
+    { title: 'Secondary divider' },
+];
+
 const Template: StoryFn<TextWithMediaLeftProps> = (args: TextWithMediaLeftProps) => {
-    const textSettings: CeBlockSettingsBarItem[] = [
-        { title: 'Some settings', value: 'Some value' },
-        { title: 'Another setting' },
-    ];
-
-    const figureSettings: CeBlockFigureGroupSetting[] = [
-        {
-            title: 'crop',
-            label: 'Cropped image',
-            iconName: 'crop'
-        },
-        {
-            title: 'lightbox',
-            label: 'Click to enlarge',
-            iconName: 'eye'
-        },
-        {
-            title: 'link',
-            label: 'Image has a link',
-            iconName: 'link'
-        },
-        {
-            title: 'a11y-error',
-            label: 'Image has some accessibility errors',
-            iconName: 'a11y',
-            isWarning: true
-        },
-    ];
-
-    const elementSettings: CeBlockSettingsBarItem[] = [
-        { title: 'Lightbox' },
-        { title: 'Autoslide', value: '6s' },
-        { title: 'Secondary divider' },
-    ];
-
     return html`
         <toujou-be-page-column class="page-column">
             <toujou-be-page-column-header class="page-column__header">
                 <p class="page-column__header-name">Content area</p>
             </toujou-be-page-column-header>
+
             <toujou-bg-page-column-content class="page-column__content">
                 <toujou-be-page-ce-element
                     class="page-ce-element"
@@ -72,9 +73,10 @@ const Template: StoryFn<TextWithMediaLeftProps> = (args: TextWithMediaLeftProps)
 
                     <toujou-be-text-block
                         slot="body"
-                        text="${args.text}"
-                        .textSettings="${textSettings}"
-                    ></toujou-be-text-block>
+                        .blockSettings="${textSettings}"
+                    >
+                        <p slot="content">${args.text}</p>
+                    </toujou-be-text-block>
 
                 </toujou-be-page-ce-element>
             </toujou-bg-page-column-content>

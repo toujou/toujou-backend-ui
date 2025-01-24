@@ -2,9 +2,7 @@ import { html } from 'lit';
 import { Meta, StoryFn } from "@storybook/web-components";
 
 interface HeadlineProps {
-    /** The text to display in the component */
     text: string;
-    /** The headline tag (h1, h2, h3, etc.) */
     tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
@@ -38,7 +36,7 @@ const Template: StoryFn<HeadlineProps> = (args: HeadlineProps) => {
         case 'h6':
             return html`<h6>${args.text}</h6>`;
         default:
-            return html`<h1>${args.text}</h1>`; // Default to h1 if level is invalid
+            return html`<h1>${args.text}</h1>`;
     }
 };
 

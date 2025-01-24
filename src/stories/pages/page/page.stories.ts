@@ -1,12 +1,9 @@
 import { html } from 'lit';
 import { Meta, StoryFn } from "@storybook/web-components";
 import { CeBlockSettingsBarItem } from "../../../components/ce-block-settings-bar/ce-block-settings-bar";
-import { createTextBlock } from "../../molecules/text-block.molecule";
-import { createMediaBlock } from "../../molecules/media-block.molecule";
 import { CeBlockFigureGroupSetting } from "../../../components/ce-block-figure-group/ce-block-figure-group";
 
 interface PageProps {
-    /** The text to display in the component */
     text: string;
 }
 
@@ -25,41 +22,41 @@ function createNewContentButton() {
     `;
 }
 
+const textSettings: CeBlockSettingsBarItem[] = [
+    { title: 'Some settings', value: 'Some value' },
+    { title: 'Another setting' },
+];
+
+const figureSettings: CeBlockFigureGroupSetting[] = [
+    {
+        title: 'crop',
+        label: 'Cropped image',
+        iconName: 'crop'
+    },
+    {
+        title: 'lightbox',
+        label: 'Click to enlarge',
+        iconName: 'eye'
+    },
+    {
+        title: 'link',
+        label: 'Image has a link',
+        iconName: 'link'
+    },
+    {
+        title: 'a11y-error',
+        label: 'Image has some accessibility errors',
+        iconName: 'a11y',
+        isWarning: true
+    },
+]
+
+const elementSettings: CeBlockSettingsBarItem[] = [
+    { title: 'Publish date', value: '01.01.2025' },
+    { title: 'Primary divider' },
+];
+
 const Template:StoryFn<PageProps> = (args: PageProps) => {
-    const textSettings: CeBlockSettingsBarItem[] = [
-        { title: 'Some settings', value: 'Some value' },
-        { title: 'Another setting' },
-    ];
-
-    const figureSettings: CeBlockFigureGroupSetting[] = [
-        {
-            title: 'crop',
-            label: 'Cropped image',
-            iconName: 'crop'
-        },
-        {
-            title: 'lightbox',
-            label: 'Click to enlarge',
-            iconName: 'eye'
-        },
-        {
-            title: 'link',
-            label: 'Image has a link',
-            iconName: 'link'
-        },
-        {
-            title: 'a11y-error',
-            label: 'Image has some accessibility errors',
-            iconName: 'a11y',
-            isWarning: true
-        },
-    ]
-
-    const elementSettings: CeBlockSettingsBarItem[] = [
-        { title: 'Publish date', value: '01.01.2025' },
-        { title: 'Primary divider' },
-    ];
-
     return html`
         <toujou-be-page-column class="page-column">
             <toujou-be-page-column-header class="page-column__header">
@@ -74,10 +71,26 @@ const Template:StoryFn<PageProps> = (args: PageProps) => {
                     header-text="Four text blocks"
                     column-layout="25-25-25-25"
                 >
-                    ${createTextBlock(args.text, textSettings)}
-                    ${createTextBlock(args.text, textSettings)}
-                    ${createTextBlock(args.text, textSettings)}
-                    ${createTextBlock(args.text, textSettings)}
+                    <toujou-be-text-block
+                        slot="body"
+                        text="${args.text}"
+                        .blockSettings="${textSettings}"
+                    ></toujou-be-text-block>
+                    <toujou-be-text-block
+                        slot="body"
+                        text="${args.text}"
+                        .blockSettings="${textSettings}"
+                    ></toujou-be-text-block>
+                    <toujou-be-text-block
+                        slot="body"
+                        text="${args.text}"
+                        .blockSettings="${textSettings}"
+                    ></toujou-be-text-block>
+                    <toujou-be-text-block
+                        slot="body"
+                        text="${args.text}"
+                        .blockSettings="${textSettings}"
+                    ></toujou-be-text-block>
                 </toujou-be-page-ce-element>
 
                 ${createNewContentButton()}
@@ -87,7 +100,11 @@ const Template:StoryFn<PageProps> = (args: PageProps) => {
                     .elementSettings="${elementSettings}"
                     header-text="Text element"
                 >
-                    ${createTextBlock(args.text, textSettings)}
+                    <toujou-be-text-block
+                        slot="body"
+                        text="${args.text}"
+                        .blockSettings="${textSettings}"
+                    ></toujou-be-text-block>
                 </toujou-be-page-ce-element>
 
                 ${createNewContentButton()}
@@ -98,8 +115,16 @@ const Template:StoryFn<PageProps> = (args: PageProps) => {
                     header-text="Two text blocks"
                     column-layout="50-50"
                 >
-                    ${createTextBlock(args.text, textSettings)}
-                    ${createTextBlock(args.text, textSettings)}
+                    <toujou-be-text-block
+                        slot="body"
+                        text="${args.text}"
+                        .blockSettings="${textSettings}"
+                    ></toujou-be-text-block>
+                    <toujou-be-text-block
+                        slot="body"
+                        text="${args.text}"
+                        .blockSettings="${textSettings}"
+                    ></toujou-be-text-block>
                 </toujou-be-page-ce-element>
 
                 ${createNewContentButton()}
@@ -110,8 +135,18 @@ const Template:StoryFn<PageProps> = (args: PageProps) => {
                     header-text="Text with media left"
                     column-layout="33-66"
                 >
-                    ${createMediaBlock('16-9', figureSettings)}
-                    ${createTextBlock(args.text, textSettings)}
+                    <toujou-be-media-block
+                        slot="body"
+                        image-aspect-ratio="16-9"
+                        no-padding="true"
+                        .figureSettings="${figureSettings}"
+                    ></toujou-be-media-block>
+
+                    <toujou-be-text-block
+                        slot="body"
+                        text="${args.text}"
+                        .blockSettings="${textSettings}"
+                    ></toujou-be-text-block>
                 </toujou-be-page-ce-element>
 
                 ${createNewContentButton()}

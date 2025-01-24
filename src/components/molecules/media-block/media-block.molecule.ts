@@ -1,5 +1,6 @@
 import { html, LitElement } from 'lit'
 import { customElement, property} from 'lit/decorators.js'
+import { CeBlockFigureGroupSetting } from "@components/ce-block-figure-group/ce-block-figure-group.ts";
 
 @customElement('toujou-be-media-block')
 export class MediaBlock extends LitElement {
@@ -7,7 +8,7 @@ export class MediaBlock extends LitElement {
     imageAspectRatio = 'auto';
 
     @property({ type: Array, attribute: 'figure-settings' })
-    figureSettings = [];
+    figureSettings: CeBlockFigureGroupSetting[] = [];
 
     @property({ type: String, attribute: 'no-padding' })
     noPadding = false;

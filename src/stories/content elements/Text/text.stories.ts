@@ -1,10 +1,8 @@
 import { html } from 'lit';
 import { Meta, StoryFn } from "@storybook/web-components";
 import { CeBlockSettingsBarItem } from "../../../components/ce-block-settings-bar/ce-block-settings-bar";
-import { createTextBlock } from "../../molecules/text-block.molecule";
 
 interface TextProps {
-    /** The text to display in the component */
     text: string;
 }
 
@@ -16,17 +14,17 @@ export default {
     },
 } as Meta<TextProps>;
 
+const textSettings: CeBlockSettingsBarItem[] = [
+    { title: 'Some settings', value: 'Some value' },
+    { title: 'Another setting' },
+];
+
+const elementSettings: CeBlockSettingsBarItem[] = [
+    { title: 'Publish date', value: '01.01.2025' },
+    { title: 'Primary divider' },
+];
+
 const Template: StoryFn<TextProps> = (args: TextProps) => {
-    const textSettings: CeBlockSettingsBarItem[] = [
-        { title: 'Some settings', value: 'Some value' },
-        { title: 'Another setting' },
-    ];
-
-    const elementSettings: CeBlockSettingsBarItem[] = [
-        { title: 'Publish date', value: '01.01.2025' },
-        { title: 'Primary divider' },
-    ];
-
     return html`
         <toujou-be-page-column class="page-column">
             <toujou-be-page-column-header class="page-column__header">
@@ -38,7 +36,12 @@ const Template: StoryFn<TextProps> = (args: TextProps) => {
                     .elementSettings="${elementSettings}"
                     header-text="Text element"
                 >
-                    ${createTextBlock(args.text, textSettings)}
+                    <toujou-be-text-block
+                        slot="body"
+                        .blockSettings="${textSettings}"
+                    >
+                        <p slot="content">${args.text}</p>
+                    </toujou-be-text-block>
                 </toujou-be-page-ce-element>
             </toujou-bg-page-column-content>
         </toujou-be-page-column>

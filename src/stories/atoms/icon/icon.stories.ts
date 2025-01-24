@@ -56,8 +56,6 @@ const Template: StoryFn<IconProps> = (args: IconProps) => {
     return html`
         <div class="icons-grid" style="display: flex; flex-flow: row wrap; gap: var(--spacing-xl);">
             ${iconVariables.map((variable) => {
-                console.log('v, variable', variable);
-                console.log('aaa', variable.name.startsWith('flag-'));
                 return html`
                     <toujou-be-ce-block-icon
                         icon-size="${args.size}"

@@ -6,7 +6,7 @@ export interface CeBlockFigureGroupSetting {
     title: string;
     label: string,
     iconName: string,
-    isWarning?: boolean; // Optional property
+    isWarning?: boolean;
 }
 
 @customElement('toujou-be-ce-block-figure-group')
