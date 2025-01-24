@@ -1,12 +1,9 @@
 import { html } from 'lit';
 import { Meta, StoryFn } from "@storybook/web-components";
 import { CeBlockSettingsBarItem } from "../../../components/ce-block-settings-bar/ce-block-settings-bar";
-import { createTextBlock } from "../../molecules/text-block.molecule";
-import { createMediaBlock } from "../../molecules/media-block.molecule";
 import { CeBlockFigureGroupSetting } from "../../../components/ce-block-figure-group/ce-block-figure-group";
 
 interface TextWithMediaLeftProps {
-    /** The text to display in the component */
     text: string;
 }
 
@@ -66,8 +63,19 @@ const Template: StoryFn<TextWithMediaLeftProps> = (args: TextWithMediaLeftProps)
                     header-text="Text with media left"
                     column-layout="33-66"
                 >
-                    ${createMediaBlock('16-9', figureSettings)}
-                    ${createTextBlock(args.text, textSettings)}
+                    <toujou-be-media-block
+                        slot="body"
+                        image-aspect-ratio="16-9"
+                        no-padding="true"
+                        .figureSettings="${figureSettings}"
+                    ></toujou-be-media-block>
+
+                    <toujou-be-text-block
+                        slot="body"
+                        text="${args.text}"
+                        .textSettings="${textSettings}"
+                    ></toujou-be-text-block>
+
                 </toujou-be-page-ce-element>
             </toujou-bg-page-column-content>
         </toujou-be-page-column>

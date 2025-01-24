@@ -1,5 +1,7 @@
 import '../src/styles/storybook-styles.css';
 
+import '../src/components/molecules/media-block/media-block.molecule';
+import '../src/components/molecules/text-block/text-block.molecule';
 import '../src/components/be-button/be-button';
 import '../src/components/ce-block-figure-group/ce-block-figure-group';
 import '../src/components/ce-block-icon/ce-block-icon';

@@ -1,8 +1,6 @@
 import { html } from 'lit';
 import { Meta, StoryFn } from "@storybook/web-components";
 import { CeBlockSettingsBarItem } from "../../../components/ce-block-settings-bar/ce-block-settings-bar";
-import { createTextBlock } from "../../molecules/text-block.molecule";
-import { createMediaBlock } from "../../molecules/media-block.molecule";
 import { CeBlockFigureGroupSetting } from "../../../components/ce-block-figure-group/ce-block-figure-group";
 
 interface TextWithMediaRightProps {
@@ -65,8 +63,18 @@ const Template: StoryFn<TextWithMediaRightProps> = (args: TextWithMediaRightProp
                     header-text="Text with media right"
                     column-layout="66-33"
                 >
-                    ${createTextBlock(args.text, textSettings)}
-                    ${createMediaBlock('16-9', figureSettings)}
+                    <toujou-be-text-block
+                        slot="body"
+                        text="${args.text}"
+                        .textSettings="${textSettings}"
+                    ></toujou-be-text-block>
+
+                    <toujou-be-media-block
+                        slot="body"
+                        image-aspect-ratio="16-9"
+                        no-padding="true"
+                        .figureSettings="${figureSettings}"
+                    ></toujou-be-media-block>
                 </toujou-be-page-ce-element>
             </toujou-bg-page-column-content>
         </toujou-be-page-column>
