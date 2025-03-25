@@ -19,7 +19,7 @@ export const TbeuiPreviewStyles = css`
     }
 
     :host([no-border]) {
-        --tbeui-preview-border: none;
+        --tbeui-preview-border: 0;
     }
 
     .content {
