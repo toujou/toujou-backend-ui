@@ -2,7 +2,7 @@ import { css } from 'lit';
 
 export const TbeuiElementStyles = css`
     :host {
-        --tbeui-element-padding: var(--tbeui-spacing-s);
+        --tbeui-element-padding: var(--tbeui-spacing-normal);
         --tbeui-element-grid-template-columns: 1fr;
 
         display: grid;
@@ -16,7 +16,7 @@ export const TbeuiElementStyles = css`
         height: fit-content;
         background-color: var(--tbeui-color-white);
         padding: 0;
-        border-radius: var(--tbeui-border-radius-xs);
+        border-radius: var(--tbeui-border-radius-s);
         box-shadow: none;
         border: 1px solid var(--tbeui-color-middle-grey);
     }

@@ -4,19 +4,18 @@ import { TbeuiSettingsBarItem } from "../../../components/molecules/tbeui-settin
 import {
     TbeuiBlockFigureGroupSetting
 } from "../../../components/molecules/tbeui-block-figure-group/tbeui-block-figure-group";
-import { text } from "node:stream/consumers";
 
 export default {
     title: 'Molecules / Column',
     argTypes: {},
 } as Meta;
 
-const textSettings: TbeuiSettingsBarItem[] = [
+const textPreviewSettings: TbeuiSettingsBarItem[] = [
     { title: 'Some settings', value: 'Some value' },
     { title: 'Another setting' },
 ];
 
-const figureSettings: TbeuiBlockFigureGroupSetting[] = [
+const figurePreviewSettings: TbeuiBlockFigureGroupSetting[] = [
     {
         title: 'crop',
         label: 'Cropped image',
@@ -40,35 +39,63 @@ const figureSettings: TbeuiBlockFigureGroupSetting[] = [
     },
 ]
 
-const elementSettings: TbeuiSettingsBarItem[] = [
+const textWithMediaLeftSettings: TbeuiSettingsBarItem[] = [
     { title: 'Publish date', value: '01.01.2025' },
     { title: 'Primary divider' },
 ];
 
+function createNewContentButton() {
+    return html`
+        <tbeui-button
+            icon-name="plus"
+            button-size="s"
+            is-centered
+            slot="content"
+        >Create new content</tbeui-button>
+    `;
+}
+
 const Template: StoryFn = () => {
     return html`
         <tbeui-column header-name="Content area">
-            <tbeui-element slot="content" header-text="Content element One">
+            <tbeui-element slot="content" header-text="Headline">
                 <tbeui-block-text slot="body">
-                    <p slot="content">Example one</p>
+                    <h3 slot="content">Headline</h3>
                 </tbeui-block-text>
             </tbeui-element>
 
-            <tbeui-element slot="content" header-text="Content element two">
+            ${createNewContentButton()}
+
+            <tbeui-element slot="content" header-text="Text">
                 <tbeui-block-text slot="body">
-                    <p slot="content">Example two</p>
+                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse facere soluta! Accusamus, et excepturi in incidunt nulla quae ullam! Alias atque culpa esse hic numquam, recusandae repellat rerum voluptatibus.</p>
                 </tbeui-block-text>
             </tbeui-element>
+
+            ${createNewContentButton()}
 
             <tbeui-element
+                class="element"
+                .elementSettings="${textWithMediaLeftSettings}"
                 header-text="Text with media left"
                 column-layout="33-66"
                 slot="content"
             >
-                <tbeui-block-text slot="body">
-                    <p slot="content">Example three</p>
+                <tbeui-block-media
+                    slot="body"
+                    image-aspect-ratio="16-9"
+                    no-padding="true"
+                    .figureSettings="${figurePreviewSettings}"
+                ></tbeui-block-media>
+
+                <tbeui-block-text
+                    slot="body"
+                    .blockSettings="${textPreviewSettings}"
+                >
+                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolor ex omnis? Fugiat, ipsum iste magni natus nisi nostrum officiis recusandae repellendus. Aliquid, ea eius magni omnis reprehenderit sapiente tempore?</p>
                 </tbeui-block-text>
             </tbeui-element>
+
         </tbeui-column>
     `;
 };

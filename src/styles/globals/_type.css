@@ -10,44 +10,44 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-family-headline);
-    font-weight: var(--font-weight-headline);
-    line-height: var(--line-height-s);
+    font-family: var(--tbeui-font-family-headline);
+    font-weight: var(--tbeui-font-weight-headline);
+    line-height: var(--tbeui-line-height-s);
     color: var(--tbeui-color-font);
     margin: 0;
 }
 
 h1 {
-    font-size: var(--font-size-xxxl);
+    font-size: var(--tbeui-font-size-xxxl);
 }
 
 h2 {
-    font-size: var(--font-size-xxl);
+    font-size: var(--tbeui-font-size-xxl);
 }
 
 h3 {
-    font-size: var(--font-size-xl);
+    font-size: var(--tbeui-font-size-xl);
 }
 
 h4 {
-    font-size: var(--font-size-l);
+    font-size: var(--tbeui-font-size-l);
 }
 
 h5 {
-    font-size: var(--font-size-m);
+    font-size: var(--tbeui-font-size-m);
 }
 
 h6 {
-    font-size: var(--font-size-normal);
+    font-size: var(--tbeui-font-size-normal);
 }
 
 p,
 ul,
 ol {
-    font-family: var(--font-family-text);
-    font-weight: var(--font-weight-text-normal);
-    font-size: var(--font-size-normal);
-    line-height: var(--line-height-normal);
+    font-family: var(--tbeui-font-family-text);
+    font-weight: var(--tbeui-font-weight-text-normal);
+    font-size: var(--tbeui-font-size-normal);
+    line-height: var(--tbeui-line-height-normal);
     color: var(--tbeui-color-font);
 }
 

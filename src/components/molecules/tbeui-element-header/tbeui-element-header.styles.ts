@@ -9,7 +9,7 @@ export const TbeuiElementHeaderStyles = css`
         gap: var(--tbeui-spacing-s);
     }
 
-    .left {
+    .icons {
         margin: 0;
         padding: 0;
         list-style: none;
@@ -28,12 +28,25 @@ export const TbeuiElementHeaderStyles = css`
         flex-grow: 1;
     }
 
-    .right {
+    .actions {
         margin: 0;
         padding: 0;
         list-style: none;
         display: flex;
         flex-flow: row nowrap;
-        grid-gap: var(--tbeui-spacing-normal);
+        grid-gap: var(--tbeui-spacing-xxs);
+    }
+
+    .actions__button {
+        border: none;
+        background-color: transparent;
+        margin: 0;
+        padding: var(--tbeui-spacing-xs) var(--tbeui-spacing-s);
+        border-radius: var(--tbeui-border-radius-xs);
+        cursor: pointer;
+    }
+
+    .actions__button:is(:hover, :focus) {
+        background-color: var(--tbeui-color-font-o-10);
     }
 `;

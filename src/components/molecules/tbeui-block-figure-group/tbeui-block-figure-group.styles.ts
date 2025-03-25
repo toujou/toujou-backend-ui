@@ -63,4 +63,8 @@ export const TbeuiBlockFigureGroupStyles = css`
     .figure-group__settings-item[is-warning] {
         background-color: var(--tbeui-color-warning);
     }
+
+    .figure-group__settings-item[is-warning] tbeui-icon {
+        --tbeui-icon-color: var(--tbeui-color-white);
+    }
 `;

@@ -10,12 +10,16 @@ export const TbeuiPreviewStyles = css`
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         border: var(--tbeui-preview-border);
-        border-radius: var(--tbeui-border-radius-s);
+        border-radius: var(--tbeui-border-radius-xs);
         overflow: hidden;
     }
 
     :host([no-padding]) {
         --tbeui-preview-content-padding: 0;
+    }
+
+    :host([no-border]) {
+        --tbeui-preview-border: none;
     }
 
     .content {

@@ -1,6 +1,7 @@
 :root {
     --tbeui-color-primary: #FFA600;
     --tbeui-color-font: #2d2d30;
+    --tbeui-color-font-o-10: color-mix(in srgb, var(--tbeui-color-font), transparent 90%);
     --tbeui-color-font-light: #5e5e60;
     --tbeui-color-font-dark: #111;
     --tbeui-color-white: #fff;

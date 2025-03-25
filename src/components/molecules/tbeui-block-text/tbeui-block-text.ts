@@ -13,11 +13,11 @@ export class TbeuiBlockText extends LitElement {
         return html`
             <tbeui-preview class="preview">
                 <slot name="content" slot="content"></slot>
-                <toujou-be-ce-block-settings-bar
+                <tbeui-settings-bar
                     slot="settings-bar"
                     class="ce-block-settings-bar"
                     .items="${this.blockSettings}"
-                ></toujou-be-ce-block-settings-bar>
+                ></tbeui-settings-bar>
             </tbeui-preview>
         `
     }

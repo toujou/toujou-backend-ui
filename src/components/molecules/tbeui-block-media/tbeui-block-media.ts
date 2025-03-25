@@ -15,16 +15,17 @@ export class TbeuiBlockMedia extends LitElement {
 
     render() {
         return html`
-            <toujou-be-page-ce-block
-                class="ce-block"
+            <tbeui-preview
+                class="preview"
+                no-border
                 ?no-padding="${this.noPadding}"
             >
-                <toujou-be-ce-block-figure-group
+                <tbeui-block-figure-group
                     slot="content"
                     image-aspect-ratio="${this.imageAspectRatio}"
                     .figureSettings="${this.figureSettings}"
                 "></toujou-be-ce-block-figure-group>
-            </toujou-be-page-ce-block>
+            </tbeui-preview>
         `
     }
 }
