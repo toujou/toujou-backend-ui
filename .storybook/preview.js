@@ -1,15 +1,26 @@
 import '../src/styles/storybook-styles.css';
 
-import '../src/components/molecules/media-block/media-block.molecule';
-import '../src/components/molecules/text-block/text-block.molecule';
-import '../src/components/be-button/be-button';
-import '../src/components/ce-block-figure-group/ce-block-figure-group';
-import '../src/components/ce-block-icon/ce-block-icon';
-import '../src/components/ce-block-figure-group/ce-block-figure-group';
-import '../src/components/ce-block-settings-bar/ce-block-settings-bar';
-import '../src/components/page-ce-block/page-ce-block';
-import '../src/components/page-ce-element/page-ce-element';
-import '../src/components/page-ce-element-header/page-ce-element-header';
+// Atoms
+import '../src/components/atoms/tbeui-button/tbeui-button';
+import '../src/components/atoms/tbeui-icon/tbeui-icon';
+import '../src/components/atoms/tbeui-preview/tbeui-preview';
+
+// Molecules
+import '../src/components/molecules/tbeui-settings-bar/tbeui-settings-bar';
+import '../src/components/molecules/tbeui-column/tbeui-column';
+import '../src/components/molecules/tbeui-element/tbeui-element';
+import '../src/components/molecules/tbeui-element-header/tbeui-element-header';
+import '../src/components/molecules/tbeui-block-text/tbeui-block-text';
+import '../src/components/molecules/tbeui-block-media/tbeui-block-media';
+import '../src/components/molecules/tbeui-block-figure-group/tbeui-block-figure-group';
+
+// import '../src/components/molecules/xxx_media-block/media-block.molecule';
+// import '../src/components/molecules/xxx_text-block/text-block.molecule';
+// import '../src/components/xxx_ce-block-figure-group/ce-block-figure-group';
+// import '../src/components/xxx_ce-block-figure-group/ce-block-figure-group';
+// import '../src/components/xxx_page-ce-block/page-ce-block';
+// import '../src/components/xxx_page-ce-element/page-ce-element';
+// import '../src/components/xxx_page-ce-element-header/page-ce-element-header';
 
 export const parameters = {
     backgrounds: {
@@ -30,10 +41,10 @@ export const parameters = {
     options: {
         storySort: {
             order: [
-                'Content Elements', // First level of grouping
-                ['Text Elements',
-                    ['Text', 'Two Text Blocks', 'Three Text Blocks', 'Four Text Blocks']
-                ],
+                'Atoms',
+                'Molecules',
+                'Content Elements',
+                'Pages'
             ],
         },
     }

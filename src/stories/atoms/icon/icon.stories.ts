@@ -54,14 +54,14 @@ const Template: StoryFn<IconProps> = (args: IconProps) => {
     const iconVariables = getIconVariables();
 
     return html`
-        <div class="icons-grid" style="display: flex; flex-flow: row wrap; gap: var(--spacing-xl);">
+        <div class="icons-grid" style="display: flex; flex-flow: row wrap; gap: var(--tbeui-spacing-xl);">
             ${iconVariables.map((variable) => {
                 return html`
-                    <toujou-be-ce-block-icon
+                    <tbeui-icon
                         icon-size="${args.size}"
                         icon-name="${variable.name}"
                         ?is-color-icon="${variable.name.startsWith('flag-')}"
-                    ></toujou-be-ce-block-icon>
+                    ></tbeui-icon>
                 `;
             })}
         </div>

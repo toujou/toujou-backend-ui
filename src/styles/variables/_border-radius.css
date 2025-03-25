@@ -1,5 +1,5 @@
 :root {
-    --border-radius-normal: .5rem;
-    --border-radius-s: .25rem;
-    --border-radius-xs: .175rem;
+    --tbeui-border-radius-normal: .5rem;
+    --tbeui-border-radius-s: .25rem;
+    --tbeui-border-radius-xs: .175rem;
 }
