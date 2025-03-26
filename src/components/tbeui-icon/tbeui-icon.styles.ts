@@ -14,19 +14,19 @@ export const TbeuiIconStyles = css`
     }
 
     :host([icon-size="xl"]) {
-        --icon-size: var(--tbeui-font-size-xxl);
+        --tbeui-icon-size: var(--tbeui-font-size-xxl);
     }
 
     :host([icon-size="l"]) {
-        --icon-size: var(--tbeui-font-size-xl);
+        --tbeui-icon-size: var(--tbeui-font-size-xl);
     }
 
     :host([icon-size="m"]) {
-        --icon-size: var(--tbeui-font-size-l);
+        --tbeui-icon-size: var(--tbeui-font-size-l);
     }
 
     :host([icon-size="s"]) {
-        --icon-size: var(--tbeui-font-size-normal);
+        --tbeui-icon-size: var(--tbeui-font-size-normal);
     }
 
     :host([icon-color="background"]) {

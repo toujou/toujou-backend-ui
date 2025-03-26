@@ -13,10 +13,7 @@ export class TbeuiPageCeHeader extends LitElement {
         return html`
             <ul class="icons">
                 <li class="left__item">
-                    <tbeui-icon icon-name="content" icon-color="font-light"></tbeui-icon>
-                </li>
-                <li class="left__item">
-                    <tbeui-icon icon-name="flag-de" is-color-icon></tbeui-icon>
+                    <tbeui-icon icon-name="content" icon-color="font"></tbeui-icon>
                 </li>
             </ul>
 

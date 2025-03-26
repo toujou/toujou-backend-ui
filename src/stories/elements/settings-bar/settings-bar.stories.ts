@@ -3,7 +3,7 @@ import { Meta, StoryFn } from "@storybook/web-components";
 import { TbeuiSettingsBarItem } from '@components/tbeui-settings-bar/tbeui-settings-bar';
 
 export default {
-    title: 'Molecules / Settings Bar',
+    title: 'Elements / Settings Bar',
     argTypes: {},
 } as Meta;
 

@@ -7,6 +7,8 @@ export const TbeuiPageCeHeaderStyles = css`
         flex-flow: row nowrap;
         align-items: center;
         gap: var(--tbeui-spacing-s);
+        background-color: var(--tbeui-color-font-o-05);
+        padding: var(--tbeui-element-padding);
     }
 
     .icons {

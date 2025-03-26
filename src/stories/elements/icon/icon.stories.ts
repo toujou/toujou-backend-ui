@@ -6,7 +6,7 @@ interface IconProps {
 }
 
 export default {
-    title: 'Atoms/Icon',
+    title: 'Elements / Icon',
     argTypes: {
         size: {
             name: 'Size',

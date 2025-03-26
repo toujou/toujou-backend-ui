@@ -3,7 +3,6 @@ import '../src/styles/storybook-styles.css';
 import '../src/components/tbeui-block-figure-group/tbeui-block-figure-group';
 import '../src/components/tbeui-block-media/tbeui-block-media';
 import '../src/components/tbeui-block-text/tbeui-block-text';
-import '../src/components/tbeui-button/tbeui-button';
 import '../src/components/tbeui-icon/tbeui-icon';
 import '../src/components/tbeui-new-content-button/tbeui-new-content-button';
 import '../src/components/tbeui-page-ce-element/tbeui-page-ce-element';
@@ -19,7 +18,7 @@ export const parameters = {
         values: [
             {
                 name: 'be-column-bg',
-                value: 'var(--tbeui-color-white)'
+                value: 'var(--tbeui-color-bg)'
             }
         ]
     },
@@ -32,11 +31,10 @@ export const parameters = {
     options: {
         storySort: {
             order: [
-                'Atoms',
-                'Molecules',
+                'Elements',
                 'Content Elements',
                 'Pages'
             ],
         },
-    }
+    },
 }

@@ -1,13 +1,22 @@
 :root {
-    --tbeui-color-primary: #FFA600;
-    --tbeui-color-font: #2d2d30;
-    --tbeui-color-font-o-05: color-mix(in srgb, var(--tbeui-color-font), transparent 95%);
-    --tbeui-color-font-o-10: color-mix(in srgb, var(--tbeui-color-font), transparent 90%);
-    --tbeui-color-font-o-20: color-mix(in srgb, var(--tbeui-color-font), transparent 80%);
+    --tbeui-color-bg: white;
+
+    /* primary */
+    --tbeui-color-primary-h: 39;
+    --tbeui-color-primary-s: 100%;
+    --tbeui-color-primary-l: 50%;
+    --tbeui-color-primary: hsl(var(--tbeui-color-primary-h), var(--tbeui-color-primary-s), var(--tbeui-color-primary-l));
+
+    /* font */
+    --tbeui-color-font-h: 240;
+    --tbeui-color-font-s: 3%;
+    --tbeui-color-font-l: 18%;
+    --tbeui-color-font: hsl(var(--tbeui-color-font-h), var(--tbeui-color-font-s), var(--tbeui-color-font-l));
+    --tbeui-color-font-o-05: hsl(var(--tbeui-color-font-h), var(--tbeui-color-font-s), 95%);
+    --tbeui-color-font-o-10: hsl(var(--tbeui-color-font-h), var(--tbeui-color-font-s), 90%);
+    --tbeui-color-font-o-25: hsl(var(--tbeui-color-font-h), var(--tbeui-color-font-s), 75%);
     --tbeui-color-font-light: #5e5e60;
     --tbeui-color-font-dark: #111;
     --tbeui-color-white: #fff;
-    --tbeui-color-light-grey: var(--tbeui-color-font-o-05);
-    --tbeui-color-middle-grey: var(--tbeui-color-font-o-10);
     --tbeui-color-warning: #df5454;
 }

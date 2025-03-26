@@ -12,7 +12,9 @@ export class TbeuiPreview extends LitElement {
                 <slot name="content"></slot>
             </div>
 
-            <slot name="settings-bar"></slot>
+            <div class="settings-bar">
+                <slot name="settings-bar"></slot>
+            </div>
         `;
     }
 }

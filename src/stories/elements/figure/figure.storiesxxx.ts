@@ -2,7 +2,7 @@ import { html } from 'lit';
 import { Meta } from "@storybook/web-components";
 
 export default {
-    title: 'Atoms/Figure',
+    title: 'Elements / Figure',
 } as Meta;
 
 const Template = () => {

@@ -2,7 +2,7 @@ import { css } from 'lit';
 
 export const TbeuiPageCeElementStyles = css`
     :host {
-        --tbeui-element-padding: var(--tbeui-spacing-normal);
+        --tbeui-element-padding: var(--tbeui-spacing-s);
         --tbeui-element-grid-template-columns: 1fr;
 
         display: grid;
@@ -18,7 +18,7 @@ export const TbeuiPageCeElementStyles = css`
         padding: 0;
         border-radius: var(--tbeui-border-radius-s);
         box-shadow: none;
-        border: 1px solid var(--tbeui-color-middle-grey);
+        border: var(--tbeui-border-width-default) solid var(--tbeui-border-color-default);
     }
 
     :host([column-layout="50-50"]) {
@@ -43,7 +43,6 @@ export const TbeuiPageCeElementStyles = css`
 
     .header {
         grid-area: header;
-        padding: var(--tbeui-element-padding) var(--tbeui-element-padding) 0;
     }
 
     .body {
@@ -53,7 +52,6 @@ export const TbeuiPageCeElementStyles = css`
         grid-gap: var(--tbeui-element-padding);
         padding: 0 var(--tbeui-element-padding);
     }
-
 
     :host > .settings-bar {
         grid-area: settings-bar;

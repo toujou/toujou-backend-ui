@@ -1,15 +1,16 @@
 import { html, LitElement } from 'lit'
 import { customElement } from 'lit/decorators.js'
+import { TbeuiNewContentButtonStyles} from "@components/tbeui-new-content-button/tbeui-new-content-button.styles.ts";
 
 @customElement('tbeui-new-content-button')
 export class TbeuiNewContentButton extends LitElement {
+    static styles = [ TbeuiNewContentButtonStyles ];
+
     render() {
         return html`
-            <tbeui-button
-                icon-name="plus"
-                button-size="s"
-                is-centered
-            >Create new content</tbeui-button>
+            <button class="button">
+                <tbeui-icon icon-size="xl" icon-name="plus" class="icon"></tbeui-icon>
+            </button>
         `
     }
 }

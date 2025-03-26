@@ -7,7 +7,7 @@ interface HeadlineProps {
 }
 
 export default {
-    title: 'Atoms/Headline',
+    title: 'Elements / Headline',
     argTypes: {
         text: {
             name: 'Text',

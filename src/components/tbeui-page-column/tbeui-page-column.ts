@@ -11,11 +11,13 @@ export class TbeuiPageColumn extends LitElement {
 
     render() {
         return html`
-            <div class="header">
-                <p class="header__name">${this.headerName}</p>
+            <div class="column-line"></div>
 
-                <div class="actions">
-                    <button class="action">
+            <div class="column-header">
+                <p class="column-header__name">${this.headerName}</p>
+
+                <div class="column-actions">
+                    <button class="column-action">
                         <tbeui-icon
                             icon-size="normal"
                             icon-name="edit-column"
@@ -24,7 +26,7 @@ export class TbeuiPageColumn extends LitElement {
                 </div>
             </div>
 
-            <div class="content">
+            <div class="column-content">
                 <slot name="content"></slot>
             </div>
         `;

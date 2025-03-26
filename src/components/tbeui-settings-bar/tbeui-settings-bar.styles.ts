@@ -11,7 +11,7 @@ export const TbeuiSettingsBarStyles = css`
         display: flex;
         flex-flow: row wrap;
         gap: var(--tbeui-spacing-s);
-        background-color: var(--tbeui-color-light-grey);
+        background-color: var(--tbeui-color-font-o-10);
     }
 
     .settings-bar__list {
