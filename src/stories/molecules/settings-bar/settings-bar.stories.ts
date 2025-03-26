@@ -1,6 +1,6 @@
 import { html } from 'lit';
 import { Meta, StoryFn } from "@storybook/web-components";
-import { TbeuiSettingsBarItem } from '@components/molecules/tbeui-settings-bar/tbeui-settings-bar';
+import { TbeuiSettingsBarItem } from '@components/tbeui-settings-bar/tbeui-settings-bar';
 
 export default {
     title: 'Molecules / Settings Bar',

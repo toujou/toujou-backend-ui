@@ -1,0 +1,5 @@
+:root {
+    --tbeui-border-color-default: var(--tbeui-color-middle-grey);
+    --tbeui-border-width-default: 1px;
+    --tbeui-border-default: var(--tbeui-border-width-default) solid var(--tbeui-border-color-default);
+}

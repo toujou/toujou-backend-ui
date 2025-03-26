@@ -3,13 +3,14 @@ import { css } from "lit";
 export const TbeuiButtonStyles = css`
     :host {
         --tbeui-button-padding: var(--tbeui-spacing-s);
-        --tbeui-button-font-size: var(--ftbeui-ont-size-normal);
+        --tbeui-button-font-size: var(--tbeui-font-size-normal);
         --tbeui-button-color: var(--tbeui-color-font);
         --tbeui-button-background-color: transparent;
         --tbeui-button-border-color: var(--tbeui-color-middle-grey);
 
         height: fit-content;
         width: fit-content;
+        display: flex;
     }
 
     :host([button-size="s"]) {

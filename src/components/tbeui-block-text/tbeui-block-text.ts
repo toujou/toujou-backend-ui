@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit'
 import { customElement, property} from 'lit/decorators.js'
-import { TbeuiSettingsBarItem } from "@components/molecules/tbeui-settings-bar/tbeui-settings-bar";
+import { TbeuiSettingsBarItem } from "@components/tbeui-settings-bar/tbeui-settings-bar";
 
 @customElement('tbeui-block-text')
 export class TbeuiBlockText extends LitElement {

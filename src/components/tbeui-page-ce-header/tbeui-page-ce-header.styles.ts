@@ -1,6 +1,6 @@
 import { css } from 'lit';
 
-export const TbeuiElementHeaderStyles = css`
+export const TbeuiPageCeHeaderStyles = css`
     :host {
         grid-area: header;
         display: flex;
@@ -34,7 +34,7 @@ export const TbeuiElementHeaderStyles = css`
         list-style: none;
         display: flex;
         flex-flow: row nowrap;
-        grid-gap: var(--tbeui-spacing-xxs);
+        grid-gap: 0;
     }
 
     .actions__button {

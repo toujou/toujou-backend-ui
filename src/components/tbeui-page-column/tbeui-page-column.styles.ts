@@ -1,6 +1,6 @@
 import { css } from 'lit';
 
-export const TbeuiColumnStyles = css`
+export const TbeuiPageColumnStyles = css`
     :host {
         display: flex;
         flex-direction: column;

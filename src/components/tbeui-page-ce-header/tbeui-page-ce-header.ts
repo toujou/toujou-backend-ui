@@ -1,10 +1,10 @@
 import { LitElement, html } from 'lit'
 import { customElement, property} from 'lit/decorators.js'
-import { TbeuiElementHeaderStyles } from "./tbeui-element-header.styles.ts";
+import { TbeuiPageCeHeaderStyles } from "./tbeui-page-ce-header.styles.ts";
 
-@customElement('tbeui-element-header')
-export class TbeuiElementHeader extends LitElement {
-    static styles = [TbeuiElementHeaderStyles];
+@customElement('tbeui-page-ce-header')
+export class TbeuiPageCeHeader extends LitElement {
+    static styles = [TbeuiPageCeHeaderStyles];
 
     @property({ type: String, attribute: 'header-text' })
     headerText: string = '';

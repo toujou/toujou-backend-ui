@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit'
 import { customElement, property} from 'lit/decorators.js'
-import { TbeuiBlockFigureGroupSetting } from "@components/molecules/tbeui-block-figure-group/tbeui-block-figure-group.ts";
+import { TbeuiBlockFigureGroupSetting } from "@components/tbeui-block-figure-group/tbeui-block-figure-group.ts";
 
 @customElement('tbeui-block-media')
 export class TbeuiBlockMedia extends LitElement {

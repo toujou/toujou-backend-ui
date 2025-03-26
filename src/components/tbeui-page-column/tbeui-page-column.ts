@@ -1,10 +1,10 @@
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { TbeuiColumnStyles } from "@components/molecules/tbeui-column/tbeui-column.styles.ts";
+import { TbeuiPageColumnStyles } from "@components/tbeui-page-column/tbeui-page-column.styles.ts";
 
-@customElement('tbeui-column')
-export class TbeuiColumn extends LitElement {
-    static styles = [ TbeuiColumnStyles ];
+@customElement('tbeui-page-column')
+export class TbeuiPageColumn extends LitElement {
+    static styles = [ TbeuiPageColumnStyles ];
 
     @property({ type: String, attribute: 'header-name' })
     headerName: string = 'Header Name missing!'

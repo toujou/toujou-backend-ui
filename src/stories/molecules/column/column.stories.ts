@@ -1,9 +1,9 @@
 import { html } from 'lit';
 import { Meta, StoryFn } from "@storybook/web-components";
-import { TbeuiSettingsBarItem } from "../../../components/molecules/tbeui-settings-bar/tbeui-settings-bar";
+import { TbeuiSettingsBarItem } from "../../../components/tbeui-settings-bar/tbeui-settings-bar";
 import {
     TbeuiBlockFigureGroupSetting
-} from "../../../components/molecules/tbeui-block-figure-group/tbeui-block-figure-group";
+} from "../../../components/tbeui-block-figure-group/tbeui-block-figure-group";
 
 export default {
     title: 'Molecules / Column',
@@ -44,37 +44,26 @@ const textWithMediaLeftSettings: TbeuiSettingsBarItem[] = [
     { title: 'Primary divider' },
 ];
 
-function createNewContentButton() {
-    return html`
-        <tbeui-button
-            icon-name="plus"
-            button-size="s"
-            is-centered
-            slot="content"
-        >Create new content</tbeui-button>
-    `;
-}
-
 const Template: StoryFn = () => {
     return html`
-        <tbeui-column header-name="Content area">
-            <tbeui-element slot="content" header-text="Headline">
+        <tbeui-page-column header-name="Content area">
+            <tbeui-page-ce-element slot="content" header-text="Headline">
                 <tbeui-block-text slot="body">
                     <h3 slot="content">Headline</h3>
                 </tbeui-block-text>
-            </tbeui-element>
+            </tbeui-page-ce-element>
 
-            ${createNewContentButton()}
+            <tbeui-new-content-button slot="content"></tbeui-new-content-button>
 
-            <tbeui-element slot="content" header-text="Text">
+            <tbeui-page-ce-element slot="content" header-text="Text">
                 <tbeui-block-text slot="body">
                     <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse facere soluta! Accusamus, et excepturi in incidunt nulla quae ullam! Alias atque culpa esse hic numquam, recusandae repellat rerum voluptatibus.</p>
                 </tbeui-block-text>
-            </tbeui-element>
+            </tbeui-page-ce-element>
 
-            ${createNewContentButton()}
+            <tbeui-new-content-button slot="content"></tbeui-new-content-button>
 
-            <tbeui-element
+            <tbeui-page-ce-element
                 class="element"
                 .elementSettings="${textWithMediaLeftSettings}"
                 header-text="Text with media left"
@@ -94,9 +83,9 @@ const Template: StoryFn = () => {
                 >
                     <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolor ex omnis? Fugiat, ipsum iste magni natus nisi nostrum officiis recusandae repellendus. Aliquid, ea eius magni omnis reprehenderit sapiente tempore?</p>
                 </tbeui-block-text>
-            </tbeui-element>
+            </tbeui-page-ce-element>
 
-        </tbeui-column>
+        </tbeui-page-column>
     `;
 };
 

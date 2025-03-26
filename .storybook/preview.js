@@ -1,26 +1,17 @@
 import '../src/styles/storybook-styles.css';
 
-// Atoms
-import '../src/components/atoms/tbeui-button/tbeui-button';
-import '../src/components/atoms/tbeui-icon/tbeui-icon';
-import '../src/components/atoms/tbeui-preview/tbeui-preview';
-
-// Molecules
-import '../src/components/molecules/tbeui-settings-bar/tbeui-settings-bar';
-import '../src/components/molecules/tbeui-column/tbeui-column';
-import '../src/components/molecules/tbeui-element/tbeui-element';
-import '../src/components/molecules/tbeui-element-header/tbeui-element-header';
-import '../src/components/molecules/tbeui-block-text/tbeui-block-text';
-import '../src/components/molecules/tbeui-block-media/tbeui-block-media';
-import '../src/components/molecules/tbeui-block-figure-group/tbeui-block-figure-group';
-
-// import '../src/components/molecules/xxx_media-block/media-block.molecule';
-// import '../src/components/molecules/xxx_text-block/text-block.molecule';
-// import '../src/components/xxx_ce-block-figure-group/ce-block-figure-group';
-// import '../src/components/xxx_ce-block-figure-group/ce-block-figure-group';
-// import '../src/components/xxx_page-ce-block/page-ce-block';
-// import '../src/components/xxx_page-ce-element/page-ce-element';
-// import '../src/components/xxx_page-ce-element-header/page-ce-element-header';
+import '../src/components/tbeui-block-figure-group/tbeui-block-figure-group';
+import '../src/components/tbeui-block-media/tbeui-block-media';
+import '../src/components/tbeui-block-text/tbeui-block-text';
+import '../src/components/tbeui-button/tbeui-button';
+import '../src/components/tbeui-icon/tbeui-icon';
+import '../src/components/tbeui-new-content-button/tbeui-new-content-button';
+import '../src/components/tbeui-page-ce-element/tbeui-page-ce-element';
+import '../src/components/tbeui-page-ce-header/tbeui-page-ce-header';
+import '../src/components/tbeui-page-column/tbeui-page-column';
+import '../src/components/tbeui-page-columns/tbeui-page-columns';
+import '../src/components/tbeui-preview/tbeui-preview';
+import '../src/components/tbeui-settings-bar/tbeui-settings-bar';
 
 export const parameters = {
     backgrounds: {

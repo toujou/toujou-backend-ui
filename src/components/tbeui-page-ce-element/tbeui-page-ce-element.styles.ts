@@ -1,6 +1,6 @@
 import { css } from 'lit';
 
-export const TbeuiElementStyles = css`
+export const TbeuiPageCeElementStyles = css`
     :host {
         --tbeui-element-padding: var(--tbeui-spacing-normal);
         --tbeui-element-grid-template-columns: 1fr;

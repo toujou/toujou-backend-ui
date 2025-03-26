@@ -2,8 +2,8 @@ import { css } from 'lit';
 
 export const TbeuiPreviewStyles = css`
     :host {
-        --tbeui-preview-border: 1px solid var(--tbeui-color-middle-grey);
-        --tbeui-preview-content-padding: var(--tbeui-spacing-s);
+        --tbeui-preview-border: none;
+        --tbeui-preview-content-padding: 0;
 
         display: block;
         height: fit-content;

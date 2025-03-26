@@ -20,6 +20,7 @@ export class TbeuiBlockFigureGroup extends LitElement {
        return html`
         <figure class="figure-group__figure">
             <img class="figure-group__image" src="https://picsum.photos/600" alt=""/>
+            
             <ul class="figure-group__settings">
                 ${this.figureSettings.map((setting: TbeuiBlockFigureGroupSetting) => {
                    if (setting.label && setting.iconName) {
