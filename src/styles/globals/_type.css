@@ -12,33 +12,10 @@ h5,
 h6 {
     font-family: var(--tbeui-font-family-headline);
     font-weight: var(--tbeui-font-weight-headline);
+    font-size: var(--tbeui-font-size-headlines);
     line-height: var(--tbeui-line-height-s);
     color: var(--tbeui-color-font);
     margin: 0;
-}
-
-h1 {
-    font-size: var(--tbeui-font-size-xxxl);
-}
-
-h2 {
-    font-size: var(--tbeui-font-size-xxl);
-}
-
-h3 {
-    font-size: var(--tbeui-font-size-xl);
-}
-
-h4 {
-    font-size: var(--tbeui-font-size-l);
-}
-
-h5 {
-    font-size: var(--tbeui-font-size-m);
-}
-
-h6 {
-    font-size: var(--tbeui-font-size-normal);
 }
 
 p,

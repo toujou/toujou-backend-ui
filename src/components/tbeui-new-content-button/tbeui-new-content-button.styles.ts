@@ -20,7 +20,7 @@ export const TbeuiNewContentButtonStyles = css`
         transform: translate(calc(-50% - var(--tbeui-spacing-normal)), -50%);
         height: var(--tbeui-new-content-button-button-size);
         width: var(--tbeui-new-content-button-button-size);
-        border-radius: 50%;
+        border-radius: var(--tbeui-border-radius-normal);
         background-color: var(--tbeui-color-bg);
         border: var(--tbeui-border-m);
         display: flex;

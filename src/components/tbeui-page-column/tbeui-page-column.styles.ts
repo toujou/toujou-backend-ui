@@ -15,6 +15,13 @@ export const TbeuiPageColumnStyles = css`
         position: relative;
         container-name: PageColumn;
         container-type: inline-size;
+        width: 100%;
+        max-width: var(--tbeui-column-max-width);
+        margin-inline: auto;
+    }
+
+    :host(:not(:last-child)) {
+        margin-bottom: var(--tbeui-spacing-l);
     }
 
     :host::before {
