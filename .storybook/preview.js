@@ -1,15 +1,16 @@
 import '../src/styles/storybook-styles.css';
 
-import '../src/components/molecules/media-block/media-block.molecule';
-import '../src/components/molecules/text-block/text-block.molecule';
-import '../src/components/be-button/be-button';
-import '../src/components/ce-block-figure-group/ce-block-figure-group';
-import '../src/components/ce-block-icon/ce-block-icon';
-import '../src/components/ce-block-figure-group/ce-block-figure-group';
-import '../src/components/ce-block-settings-bar/ce-block-settings-bar';
-import '../src/components/page-ce-block/page-ce-block';
-import '../src/components/page-ce-element/page-ce-element';
-import '../src/components/page-ce-element-header/page-ce-element-header';
+import '../src/components/tbeui-block-figure-group/tbeui-block-figure-group';
+import '../src/components/tbeui-block-media/tbeui-block-media';
+import '../src/components/tbeui-block-text/tbeui-block-text';
+import '../src/components/tbeui-icon/tbeui-icon';
+import '../src/components/tbeui-new-content-button/tbeui-new-content-button';
+import '../src/components/tbeui-page-ce-element/tbeui-page-ce-element';
+import '../src/components/tbeui-page-ce-header/tbeui-page-ce-header';
+import '../src/components/tbeui-page-column/tbeui-page-column';
+import '../src/components/tbeui-page-columns/tbeui-page-columns';
+import '../src/components/tbeui-preview/tbeui-preview';
+import '../src/components/tbeui-settings-bar/tbeui-settings-bar';
 
 export const parameters = {
     backgrounds: {
@@ -17,7 +18,7 @@ export const parameters = {
         values: [
             {
                 name: 'be-column-bg',
-                value: 'var(--tbeui-color-white)'
+                value: 'var(--tbeui-color-bg)'
             }
         ]
     },
@@ -30,11 +31,10 @@ export const parameters = {
     options: {
         storySort: {
             order: [
-                'Content Elements', // First level of grouping
-                ['Text Elements',
-                    ['Text', 'Two Text Blocks', 'Three Text Blocks', 'Four Text Blocks']
-                ],
+                'Elements',
+                'Content Elements',
+                'Pages'
             ],
         },
-    }
+    },
 }

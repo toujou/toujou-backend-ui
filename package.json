@@ -26,12 +26,12 @@
   },
   "homepage": "https://github.com/toujou/toujou-backend-ui#readme",
   "devDependencies": {
-    "@chromatic-com/storybook": "^3.2.4",
-    "@storybook/addon-essentials": "^8.5.0",
-    "@storybook/blocks": "^8.5.0",
-    "@storybook/test": "^8.5.0",
-    "@storybook/web-components": "^8.5.0",
-    "@storybook/web-components-vite": "^8.5.0",
+    "@chromatic-com/storybook": "^3.2.6",
+    "@storybook/addon-essentials": "^8.6.9",
+    "@storybook/blocks": "^8.6.9",
+    "@storybook/test": "^8.6.9",
+    "@storybook/web-components": "^8.6.9",
+    "@storybook/web-components-vite": "^8.6.9",
     "@types/node": "^22.10.7",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
@@ -40,7 +40,7 @@
     "postcss": "^8.5.1",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
-    "storybook": "^8.5.0",
+    "storybook": "^8.6.9",
     "typescript": "^5.7.3",
     "vite-tsconfig-paths": "^5.1.4"
   }

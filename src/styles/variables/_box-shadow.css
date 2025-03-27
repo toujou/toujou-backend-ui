@@ -1,10 +1,21 @@
 :root {
-    --box-shadow-color: 286deg 0% 56%;
-    --box-shadow-color-1: hsl(0 0% 0% / 5%);
-    --box-shadow-color-2: hsl(0 0% 0% / 6%);
-    --box-shadow-color-3: hsl(0 0% 0% / 10%);
+    --tbeui-box-shadow-color: 286deg 0% 56%;
+    --tbeui-box-shadow-color-1: hsl(0 0% 0% / 5%);
+    --tbeui-box-shadow-color-2: hsl(0 0% 0% / 6%);
+    --tbeui-box-shadow-color-3: hsl(0 0% 0% / 10%);
 
-    --box-shadow-xs: 0 1px 2px 0 var(--box-shadow-color-1), 0 0px 3px 0 var(--box-shadow-color-2), 0 2px 2px -1px var(--box-shadow-color-3);
-    --box-shadow-s: 0 4px 5px 0 var(--box-shadow-color-1), 0 1px 10px 0 var(--box-shadow-color-2), 0 2px 4px -1px var(--box-shadow-color-3);
-    --box-shadow-normal: 0 6px 10px 0 var(--box-shadow-color-1), 0 1px 18px 0 var(--box-shadow-color-2), 0 3px 5px -1px var(--box-shadow-color-3);
+    --tbeui-box-shadow-xs:
+        0 1px 2px 0 var(--tbeui-box-shadow-color-1),
+        0 0px 3px 0 var(--tbeui-box-shadow-color-2),
+        0 2px 2px -1px var(--tbeui-box-shadow-color-3);
+
+    --tbeui-box-shadow-s:
+        0 4px 5px 0 var(--tbeui-box-shadow-color-1),
+        0 1px 10px 0 var(--tbeui-box-shadow-color-2),
+        0 2px 4px -1px var(--tbeui-box-shadow-color-3);
+
+    --tbeui-box-shadow-normal:
+        0 6px 10px 0 var(--tbeui-box-shadow-color-1),
+        0 1px 18px 0 var(--tbeui-box-shadow-color-2),
+        0 3px 5px -1px var(--tbeui-box-shadow-color-3);
 }
