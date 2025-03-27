@@ -9,6 +9,7 @@ export const TbeuiPageCeHeaderStyles = css`
         gap: var(--tbeui-spacing-s);
         background-color: var(--tbeui-color-font-o-05);
         padding: var(--tbeui-element-padding);
+        border-radius: var(--tbeui-border-radius-s) var(--tbeui-border-radius-s) 0 0;
     }
 
     .icons {

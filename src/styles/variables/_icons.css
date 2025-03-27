@@ -5,12 +5,20 @@
     --tbeui-icon-dots-vertical: url('/assets/icons/dots-vertical.svg');
     --tbeui-icon-edit-column: url('/assets/icons/edit-column.svg');
     --tbeui-icon-eye: url('/assets/icons/eye.svg');
-    --tbeui-icon-headline-h1: url('/assets/icons/headline-h1.svg');
+    --tbeui-icon-h1: url('/assets/icons/h1.svg');
+    --tbeui-icon-h2: url('/assets/icons/h2.svg');
+    --tbeui-icon-h3: url('/assets/icons/h3.svg');
+    --tbeui-icon-h4: url('/assets/icons/h4.svg');
+    --tbeui-icon-h5: url('/assets/icons/h5.svg');
+    --tbeui-icon-h6: url('/assets/icons/h6.svg');
     --tbeui-icon-link: url('/assets/icons/link.svg');
+    --tbeui-icon-ol: url('/assets/icons/ol.svg');
+    --tbeui-icon-p: url('/assets/icons/p.svg');
     --tbeui-icon-pencil: url('/assets/icons/pencil.svg');
     --tbeui-icon-plus: url('/assets/icons/plus.svg');
     --tbeui-icon-toggle-switch: url('/assets/icons/toggle-switch.svg');
     --tbeui-icon-trash: url('/assets/icons/trash.svg');
+    --tbeui-icon-ul: url('/assets/icons/ul.svg');
 
     /* flags */
     --tbeui-icon-flag-de: url('/assets/icons/flag-de.svg');

@@ -4,6 +4,7 @@ export const TbeuiPreviewStyles = css`
     :host {
         --tbeui-preview-border: none;
         --tbeui-preview-content-padding: 0;
+        --tbeui-preview-settings-group-padding-top: 0;
 
         display: grid;
         grid-template-columns: auto 1fr;
@@ -23,6 +24,14 @@ export const TbeuiPreviewStyles = css`
         --tbeui-preview-border: 0;
     }
 
+    :host([preview-type="headline"]) {
+        --tbeui-preview-settings-group-padding-top: var(--tbeui-spacing-xs);
+    }
+
+    :host([preview-type="text"]) {
+        --tbeui-preview-settings-group-padding-top: var(--tbeui-spacing-xxs);
+    }
+
     .content {
         display: block;
         padding: var(--tbeui-preview-content-padding);
@@ -34,5 +43,9 @@ export const TbeuiPreviewStyles = css`
 
     .content > *:last-child {
         margin-bottom: 0;
+    }
+
+    .settings-group {
+        padding-top: var(--tbeui-preview-settings-group-padding-top);
     }
 `;

@@ -1,6 +1,9 @@
 import { html } from 'lit';
 import { Meta } from "@storybook/web-components";
-import { TbeuiSettingsBarItem } from "../../components/tbeui-settings-group/tbeui-settings-group";
+import {
+    TbeuiSettingsBarItem,
+    TbeuiSettingsGroupItem
+} from "../../components/tbeui-settings-group/tbeui-settings-group";
 import { TbeuiBlockFigureGroupSetting } from "@components/tbeui-block-figure-group/tbeui-block-figure-group";
 
 export default {
@@ -8,10 +11,11 @@ export default {
     component: 'text',
 } as Meta;
 
-const headlinePreviewSettings: TbeuiSettingsBarItem[] = [
-    { title: 'Tag', value: 'H3' },
-    { title: 'Alignment', value: 'left' },
-    { title: 'Color', value: 'primary' },
+const headlinePreviewSettings: TbeuiSettingsGroupItem[] = [
+    {
+        title: 'h1',
+        value: 'h1 headline',
+    }
 ];
 
 const textPreviewSettings: TbeuiSettingsBarItem[] = [
@@ -58,9 +62,9 @@ const Template = () => {
 
             <tbeui-page-column header-name="Content area">
                 <tbeui-page-ce-element slot="content" header-text="Headline">
-                    <tbeui-block-text slot="body" .blockSettings="${headlinePreviewSettings}">
+                    <tbeui-block-headline slot="body" .headlineSettings="${headlinePreviewSettings}">
                         <h3 slot="content">This is a beautiful headline</h3>
-                    </tbeui-block-text>
+                    </tbeui-block-headline>
                 </tbeui-page-ce-element>
 
                 <tbeui-new-content-button slot="content"></tbeui-new-content-button>

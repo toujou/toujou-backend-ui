@@ -31,3 +31,8 @@ ol {
 p {
     margin: 0;
 }
+
+:is(ul, ol) {
+    margin: 0;
+    padding: 0 var(--tbeui-spacing-normal);
+}
