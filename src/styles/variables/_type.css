@@ -14,6 +14,8 @@
     --tbeui-font-size-xs: calc(var(--tbeui-font-size-base) * .75);
     --tbeui-font-size-xxs: calc(var(--tbeui-font-size-base) * .625);
 
+    --tbeui-font-size-headlines: var(--tbeui-font-size-l);
+
     --tbeui-font-weight-text-normal: 400;
     --tbeui-font-weight-text-bold: 700;
     --tbeui-font-weight-headline: 700;

@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit'
 import { customElement, property} from 'lit/decorators.js'
 import { TbeuiPageCeElementStyles } from "./tbeui-page-ce-element.styles.ts";
-import { TbeuiSettingsBarItem } from "@components/tbeui-settings-bar/tbeui-settings-bar.ts";
+import { TbeuiSettingsBarItem } from "@components/tbeui-settings-group/tbeui-settings-group.ts";
 
 @customElement('tbeui-page-ce-element')
 export class TbeuiPageCeElement extends LitElement {

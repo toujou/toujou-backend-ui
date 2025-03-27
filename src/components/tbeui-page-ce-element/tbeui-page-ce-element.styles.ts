@@ -18,7 +18,7 @@ export const TbeuiPageCeElementStyles = css`
         padding: 0;
         border-radius: var(--tbeui-border-radius-s);
         box-shadow: none;
-        border: var(--tbeui-border-width-default) solid var(--tbeui-border-color-default);
+        border: var(--tbeui-border-default);
     }
 
     :host([column-layout="50-50"]) {

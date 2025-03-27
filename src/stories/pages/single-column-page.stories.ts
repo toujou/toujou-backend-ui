@@ -1,10 +1,10 @@
 import { html } from 'lit';
 import { Meta } from "@storybook/web-components";
-import { TbeuiSettingsBarItem } from "@components/tbeui-settings-bar/tbeui-settings-bar";
+import { TbeuiSettingsBarItem } from "../../components/tbeui-settings-group/tbeui-settings-group";
 import { TbeuiBlockFigureGroupSetting } from "@components/tbeui-block-figure-group/tbeui-block-figure-group";
 
 export default {
-    title: 'Pages / Page With Three Columns',
+    title: 'Pages / Single Column Page',
     component: 'text',
 } as Meta;
 
@@ -105,4 +105,4 @@ const Template = () => {
     `;
 }
 
-export const PageWithThreeColumns = Template.bind({});
+export const SingleColumnPage = Template.bind({});

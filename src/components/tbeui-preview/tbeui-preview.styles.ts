@@ -5,9 +5,10 @@ export const TbeuiPreviewStyles = css`
         --tbeui-preview-border: none;
         --tbeui-preview-content-padding: 0;
 
-        display: block;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: var(--tbeui-spacing-xs);
         height: fit-content;
-        grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         border: var(--tbeui-preview-border);
         border-radius: var(--tbeui-border-radius-xs);
