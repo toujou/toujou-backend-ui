@@ -37,6 +37,10 @@ export const TbeuiIconStyles = css`
         --tbeui-icon-color: var(--tbeui-color-font-light);
     }
 
+    :host([icon-color="warning"]) {
+        --tbeui-icon-color: var(--tbeui-color-warning);
+    }
+
     .icon {
         display: block;
         height: 100%;
@@ -46,15 +50,5 @@ export const TbeuiIconStyles = css`
         mask-repeat: no-repeat;
         mask-size: contain;
         mask-image: var(--tbeui-icon-image);
-    }
-
-    :host([is-color-icon]) .icon {
-        mask-image: unset;
-        background-image: var(--tbeui-icon-image);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: auto;
-        aspect-ratio: var(--tbeui-flag-aspect-ratio);
     }
 `;

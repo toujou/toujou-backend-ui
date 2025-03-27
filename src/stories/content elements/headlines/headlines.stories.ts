@@ -8,24 +8,15 @@ export default {
 } as Meta;
 
 const h1Settings: TbeuiSettingsGroupItem[] = [
-    {
-        title: 'h1',
-        value: 'h1 headline',
-    },
+    { title: 'h1', value: 'h1 headline' },
 ];
 
 const h2Settings: TbeuiSettingsGroupItem[] = [
-    {
-        title: 'h2',
-        value: 'h2 headline',
-    },
+    { title: 'h2', value: 'h2 headline' },
 ];
 
 const h3Settings: TbeuiSettingsGroupItem[] = [
-    {
-        title: 'h3',
-        value: 'h3 headline',
-    },
+    { title: 'h3', value: 'h3 headline' },
 ];
 
 const Template = () => {
