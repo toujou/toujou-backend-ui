@@ -2,9 +2,9 @@
     --tbeui-color-bg: white;
 
     /* primary */
-    --tbeui-color-primary-h: 39;
-    --tbeui-color-primary-s: 100%;
-    --tbeui-color-primary-l: 50%;
+    --tbeui-color-primary-h: 210;
+    --tbeui-color-primary-s: 80%;
+    --tbeui-color-primary-l: 54%;
     --tbeui-color-primary: hsl(var(--tbeui-color-primary-h), var(--tbeui-color-primary-s), var(--tbeui-color-primary-l));
 
     /* font */

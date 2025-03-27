@@ -1,5 +1,6 @@
 :root {
     --tbeui-border-color-default: var(--tbeui-color-font-o-25);
+    --tbeui-border-color-primary: var(--tbeui-color-primary);
     --tbeui-border-width-default: 1px;
     --tbeui-border-width-m: calc(var(--tbeui-border-width-default) * 2);
     --tbeui-border-default: var(--tbeui-border-width-default) solid var(--tbeui-border-color-default);

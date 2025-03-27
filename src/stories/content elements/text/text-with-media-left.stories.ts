@@ -2,13 +2,14 @@ import { html } from 'lit';
 import { Meta, StoryFn } from "@storybook/web-components";
 import { CeBlockSettingsBarItem } from "../../../components/ce-block-settings-bar/ce-block-settings-bar";
 import { CeBlockFigureGroupSetting } from "@components/tbeui-block-figure-group/tbeui-block-figure-group.ts";
+import { TbeuiSettingsGroupItem } from "../../../components/tbeui-settings-group/tbeui-settings-group";
 
 interface TextWithMediaLeftProps {
     text: string;
 }
 
 export default {
-    title: 'Content Elements/Text Elements/Text With Media Left',
+    title: 'Content Elements/Text / Text With Media Left',
     component: 'text',
     argTypes: {
         text: { control: 'text' },
@@ -50,37 +51,31 @@ const elementSettings: CeBlockSettingsBarItem[] = [
     { title: 'Secondary divider' },
 ];
 
+const listSettings: TbeuiSettingsGroupItem[] = [
+    { title: 'ul', value: 'Unordered list' },
+];
+
 const Template: StoryFn<TextWithMediaLeftProps> = (args: TextWithMediaLeftProps) => {
     return html`
-        <toujou-be-page-column class="page-column">
-            <toujou-be-page-column-header class="page-column__header">
-                <p class="page-column__header-name">Content area</p>
-            </toujou-be-page-column-header>
+        <tbeui-page-column header-name="Content area">
+            <tbeui-page-ce-element slot="content" header-text="Text with media left">
+                <toujou-be-media-block
+                    slot="body"
+                    image-aspect-ratio="16-9"
+                    no-padding="true"
+                    .figureSettings="${figureSettings}"
+                ></toujou-be-media-block>
 
-            <toujou-bg-page-column-content class="page-column__content">
-                <toujou-be-page-ce-element
-                    class="page-ce-element"
-                    .elementSettings="${elementSettings}"
-                    header-text="Text with media left"
-                    column-layout="33-66"
-                >
-                    <toujou-be-media-block
-                        slot="body"
-                        image-aspect-ratio="16-9"
-                        no-padding="true"
-                        .figureSettings="${figureSettings}"
-                    ></toujou-be-media-block>
+                <tbeui-block-text slot="body" .textSettings="${listSettings}">
+                    <ul class="list" slot="content">
+                        <li>Item one</li>
+                        <li>Item two</li>
+                        <li>Item three</li>
+                    </ul>
+                </tbeui-block-text>
+            </tbeui-page-ce-element>
+        </tbeui-page-column>
 
-                    <toujou-be-text-block
-                        slot="body"
-                        .blockSettings="${textSettings}"
-                    >
-                        <p slot="content">${args.text}</p>
-                    </toujou-be-text-block>
-
-                </toujou-be-page-ce-element>
-            </toujou-bg-page-column-content>
-        </toujou-be-page-column>
     `;
 }
 

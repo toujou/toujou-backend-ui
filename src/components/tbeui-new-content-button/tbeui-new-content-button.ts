@@ -9,7 +9,8 @@ export class TbeuiNewContentButton extends LitElement {
     render() {
         return html`
             <button class="button">
-                <tbeui-icon icon-size="xl" icon-name="plus" class="icon"></tbeui-icon>
+                <tbeui-icon icon-size="normal" icon-name="plus" class="icon"></tbeui-icon>
+                New content element
             </button>
         `
     }

@@ -2,10 +2,8 @@ import { css } from 'lit';
 
 export const TbeuiPageColumnStyles = css`
     :host {
-        --tbeui-column-line-width: 3px;
-        --tbeui-column-line-dot-size: var(--tbeui-spacing-s);
-        --tbeui-column-line-dot-color: var(--tbeui-border-color-default);
-        --tbeui-column-line-dot-border: var(--tbeui-column-line-width) solid var(--tbeui-color-bg);
+        --tbeui-column-dot-size: var(--tbeui-spacing-s);
+        --tbeui-column-line-dot-color: var(--tbeui-color-font);
 
         display: flex;
         flex-direction: column;
@@ -27,26 +25,15 @@ export const TbeuiPageColumnStyles = css`
     :host::before {
         content: '';
         display: block;
-        height: var(--tbeui-column-line-dot-size);
-        width: var(--tbeui-column-line-dot-size);
+        height: var(--tbeui-column-dot-size);
+        width: var(--tbeui-column-dot-size);
         background-color: var(--tbeui-column-line-dot-color);
         position: absolute;
-        top: 2px;
-        left: 0;
+        top: 5px;
+        left: 1px;
         border-radius: 50%;
         transform: translateX(-50%);
-        border: var(--tbeui-column-line-dot-border);
         z-index: 2;
-    }
-
-    .column-line {
-        width: var(--tbeui-column-line-width);
-        height: calc(100% - var(--tbeui-spacing-normal));
-        position: absolute;
-        top: var(--tbeui-spacing-s);
-        left: 0;
-        transform: translateX(-50%);
-        background-color: var(--tbeui-border-color-default);
     }
 
     .column-header {
@@ -86,6 +73,6 @@ export const TbeuiPageColumnStyles = css`
         grid-area: content;
         display: flex;
         flex-direction: column;
-        gap: var(--tbeui-spacing-normal);
+        gap: 0;
     }
 `;

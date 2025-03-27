@@ -21,6 +21,7 @@ export const TbeuiPageCeElementStyles = css`
         border-radius: var(--tbeui-border-radius-s);
         box-shadow: none;
         border: var(--tbeui-border-default);
+        position: relative;
     }
 
     :host([column-layout="50-50"]) {
@@ -41,6 +42,16 @@ export const TbeuiPageCeElementStyles = css`
 
     :host([column-layout="25-25-25-25"]) {
         --tbeui-element-grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    :host::before {
+        content: '';
+        width: var(--tbeui-border-width-default);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: calc(var(--tbeui-spacing-normal) * -1);
+        background-color: var(--tbeui-color-primary);
     }
 
     .header {
