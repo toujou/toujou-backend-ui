@@ -8,7 +8,6 @@ export class TbeuiBlockText extends LitElement {
     textSettings: TbeuiSettingsGroupItem[] = [];
 
     render() {
-        console.log('11', this.textSettings);
         return html`
             <tbeui-preview
                 class="preview"

@@ -26,7 +26,6 @@ export class TbeuiSettingsGroup extends LitElement {
         return html`
             <ul class="list">
                 ${this.items.map((item: TbeuiSettingsGroupItem) => html`
-                    ${console.log('ttt', item.type)}
                     <li class="list__item">
                         <tbeui-icon
                             title="${item.value}"

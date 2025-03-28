@@ -4,21 +4,15 @@ export const TbeuiPageCeElementStyles = css`
     :host {
         --tbeui-element-padding: var(--tbeui-spacing-s);
         --tbeui-element-grid-template-columns: 1fr;
-        --tbeui-element-grab-area-width: var(--tbeui-spacing-normal);
-        --tbeui-element-grab-area-icon-color: var(--tbeui-color-font-light);
-        --tbeui-element-grab-area-icon-color-active: var(--tbeui-color-font);
+        --tbeui-element-border-radius: var(--tbeui-border-radius-normal);
 
-        display: grid;
-        grid-template-columns: var(--tbeui-element-grab-area-width) 1fr;
-        grid-template-rows: auto auto;
-        grid-template-areas:
-            "grab-area header"
-            "grab-area body";
-        grid-gap: var(--tbeui-element-padding) 0;
+        display: flex;
+        flex-direction: column;
+        gap: var(--tbeui-element-padding) 0;
         height: fit-content;
         background-color: var(--tbeui-color-white);
         padding: 0;
-        border-radius: var(--tbeui-border-radius-s);
+        border-radius: var(--tbeui-element-border-radius);
         box-shadow: none;
         border: var(--tbeui-border-default);
         position: relative;
@@ -66,20 +60,7 @@ export const TbeuiPageCeElementStyles = css`
         padding: 0 var(--tbeui-element-padding);
     }
 
-    .grab-area {
-        grid-area: grab-area;
-        background-color: var(--tbeui-color-font-o-10);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: grab;
-    }
-
-    .grab-area .grab-area__icon {
-        --tbeui-icon-color: var(--tbeui-element-grab-area-icon-color);
-    }
-
-    .grab-area:is(:hover, :focus-visible) .grab-area__icon {
-        --tbeui-icon-color: var(--tbeui-element-grab-area-icon-color-active);
+    .body[hidden] {
+        display: none;
     }
 `;

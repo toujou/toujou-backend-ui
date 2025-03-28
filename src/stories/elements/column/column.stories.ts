@@ -13,7 +13,7 @@ const Template: StoryFn = () => {
 
                 <tbeui-new-content-button slot="content"></tbeui-new-content-button>
 
-                <tbeui-page-ce-element slot="content" header-text="Text">
+                <tbeui-page-ce-element slot="content" ctype-name="Text" element-name="Simple text" id="col-1">
                     <tbeui-block-text slot="body">
                         <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse facere soluta! Accusamus, et excepturi in incidunt nulla quae ullam! Alias atque culpa esse hic numquam, recusandae repellat rerum voluptatibus.</p>
                     </tbeui-block-text>
@@ -21,7 +21,7 @@ const Template: StoryFn = () => {
 
                 <tbeui-new-content-button slot="content"></tbeui-new-content-button>
 
-                <tbeui-page-ce-element slot="content" header-text="Text">
+                <tbeui-page-ce-element slot="content" ctype-name="Text" element-name="Another great text" id="col-2">
                     <tbeui-block-text slot="body">
                         <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse facere soluta! Accusamus, et excepturi in incidunt nulla quae ullam! Alias atque culpa esse hic numquam, recusandae repellat rerum voluptatibus.</p>
                     </tbeui-block-text>
