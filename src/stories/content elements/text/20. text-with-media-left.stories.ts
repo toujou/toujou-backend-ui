@@ -5,7 +5,7 @@ import {
 } from "@components/tbeui-settings-group/tbeui-settings-group";
 
 export default {
-    title: 'Content Elements / Text / Text With Media Right',
+    title: 'Content Elements / Text / Text With Media Left',
     component: 'text',
 };
 
@@ -30,10 +30,14 @@ const Template = () => {
 
             <tbeui-page-ce-element
                 slot="content"
-                ctype-name="Text with media right"
+                ctype-name="Text with media left"
                 id="col-1"
                 column-layout="50-50"
             >
+                <tbeui-page-ce-element-column slot="body">
+                    <tbeui-block-media slot="body" .blockSettings="${mediaSettings}" media-url="https://picsum.photos/600" media-alt="Nice image!"></tbeui-block-media>
+                </tbeui-page-ce-element-column>
+
                 <tbeui-page-ce-element-column slot="body">
                     <tbeui-block-headline .blockSettings="${headlineOneSettings}">
                         <h3 slot="content">Text two Headline</h3>
@@ -44,10 +48,6 @@ const Template = () => {
                     </tbeui-block-text>
                 </tbeui-page-ce-element-column>
 
-                <tbeui-page-ce-element-column slot="body">
-                    <tbeui-block-media slot="body" .blockSettings="${mediaSettings}"></tbeui-block-media>
-                </tbeui-page-ce-element-column>
-
             </tbeui-page-ce-element>
 
         </tbeui-page-column>
@@ -56,4 +56,4 @@ const Template = () => {
     `;
 }
 
-export const TextWithMediaRight = Template.bind({});
+export const TextWithMediaLeft = Template.bind({});

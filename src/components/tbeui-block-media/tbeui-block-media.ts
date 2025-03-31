@@ -13,8 +13,14 @@ export class TbeuiBlockMedia extends LitElement {
     @property({ type: String, attribute: 'no-padding' })
     noPadding = false;
 
-    @property({ type: Array, attribute: 'block-settings' })
+    @property({ type: Array })
     blockSettings: TbeuiSettingsGroupItem[] = [];
+
+    @property({ type: String, attribute: 'media-url' })
+    mediaURL: string = '';
+
+    @property({ type: String, attribute: 'media-alt' })
+    mediaAlt: string = '';
 
     render() {
         return html`
@@ -25,9 +31,14 @@ export class TbeuiBlockMedia extends LitElement {
                 .settings="${this.blockSettings}"
             >
 
-                <figure class="figure" slot="content">
-                    <img class="image" src="https://picsum.photos/600" alt=""/>
-                </figure>
+                ${this.mediaURL
+                    ? html`
+                        <figure class="figure" slot="content">
+                            <img class="image" src="${this.mediaURL}" alt="${this.mediaAlt}"/>
+                        </figure>
+                    ` : html`
+                        <tbeui-media-placeholder slot="content"></tbeui-media-placeholder>
+                    `}
 
             </tbeui-preview>
         `

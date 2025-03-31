@@ -6,7 +6,7 @@ import {
 } from "@components/tbeui-settings-group/tbeui-settings-group";
 
 export default {
-    title: 'Content Elements / Media / Single Media',
+    title: 'Elements / Placeholder Media',
 } as Meta;
 
 const mediaSettings: TbeuiSettingsGroupItem[] = [
@@ -27,7 +27,7 @@ const Template = () => {
                 element-name="Test image"
                 id="col-1"
             >
-                <tbeui-block-media slot="body" .blockSettings="${mediaSettings}" media-url="https://picsum.photos/600" media-alt="Nice image!"></tbeui-block-media>
+                <tbeui-block-media slot="body" .blockSettings="${mediaSettings}"></tbeui-block-media>
             </tbeui-page-ce-element>
 
             <tbeui-new-content-button slot="content"></tbeui-new-content-button>
@@ -35,4 +35,4 @@ const Template = () => {
     `;
 }
 
-export const SingleMedia = Template.bind({});
+export const PlaceholderMedia = Template.bind({});

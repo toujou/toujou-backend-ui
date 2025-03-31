@@ -36,7 +36,6 @@ export class TbeuiPageCeElement extends LitElement {
     }
 
     render() {
-        console.log('aaa', this.settingsHeaderItems)
         return html`
             <tbeui-page-ce-header
                 class="header"

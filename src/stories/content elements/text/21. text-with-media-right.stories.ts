@@ -1,89 +1,59 @@
 import { html } from 'lit';
-import { Meta, StoryFn } from "@storybook/web-components";
-import { CeBlockSettingsBarItem } from "../../../components/ce-block-settings-bar/ce-block-settings-bar";
-import { CeBlockFigureGroupSetting } from "@components/tbeui-block-figure-group/tbeui-block-figure-group.ts";
-
-interface TextWithMediaRightProps {
-    text: string;
-}
+import {
+    TbeuiSettingsGroupItem,
+    TbeuiSettingsGroupItemType
+} from "@components/tbeui-settings-group/tbeui-settings-group";
 
 export default {
-    title: 'Content Elements/Text Elements/Text With Media Right',
+    title: 'Content Elements / Text / Text With Media Right',
     component: 'text',
-    argTypes: {
-        text: { control: 'text' },
-    },
-} as Meta<TextWithMediaRightProps>;
+};
 
-const textSettings: CeBlockSettingsBarItem[] = [
-    { title: 'Some settings', value: 'Some value' },
-    { title: 'Another setting' },
+const headlineOneSettings: TbeuiSettingsGroupItem[] = [
+    { iconName: 'h3', value: 'Headline 3' },
 ];
 
-const figureSettings: CeBlockFigureGroupSetting[] = [
-    {
-        title: 'crop',
-        label: 'Cropped image',
-        iconName: 'crop'
-    },
-    {
-        title: 'lightbox',
-        label: 'Click to enlarge',
-        iconName: 'eye'
-    },
-    {
-        title: 'link',
-        label: 'Image has a link',
-        iconName: 'link'
-    },
-    {
-        title: 'a11y-error',
-        label: 'Image has some accessibility errors',
-        iconName: 'a11y',
-        isWarning: true
-    },
+const textOneSettings: TbeuiSettingsGroupItem[] = [
+    { iconName: 'p', value: 'Paragraph' },
 ];
 
-const elementSettings: CeBlockSettingsBarItem[] = [
-    { title: 'Lightbox' },
-    { title: 'Autoslide', value: '6s' },
-    { title: 'Secondary divider' },
+const mediaSettings: TbeuiSettingsGroupItem[] = [
+    { iconName: 'link', value: 'Image has a link' },
+    { iconName: 'eye', value: 'Lightbox is on' },
+    { iconName: 'crop', value: 'Image is cropped' },
+    { iconName: 'a11y', value: 'Alt text is missing', type: TbeuiSettingsGroupItemType.Warning },
 ];
 
-const Template: StoryFn<TextWithMediaRightProps> = (args: TextWithMediaRightProps) => {
+const Template = () => {
     return html`
-        <toujou-be-page-column class="page-column">
-            <toujou-be-page-column-header class="page-column__header">
-                <p class="page-column__header-name">Content area</p>
-            </toujou-be-page-column-header>
+        <tbeui-page-column header-name="Content area">
 
-            <toujou-bg-page-column-content class="page-column__content">
-                <toujou-be-page-ce-element
-                    class="page-ce-element"
-                    .elementSettings="${elementSettings}"
-                    header-text="Text with media right"
-                    column-layout="66-33"
-                >
-                    <toujou-be-text-block
-                        slot="body"
-                        .blockSettings="${textSettings}"
-                    >
-                        <p slot="content">${args.text}</p>
-                    </toujou-be-text-block>
+            <tbeui-page-ce-element
+                slot="content"
+                ctype-name="Text with media right"
+                id="col-1"
+                column-layout="50-50"
+            >
+                <tbeui-page-ce-element-column slot="body">
+                    <tbeui-block-headline .blockSettings="${headlineOneSettings}">
+                        <h3 slot="content">Text two Headline</h3>
+                    </tbeui-block-headline>
 
-                    <toujou-be-media-block
-                        slot="body"
-                        image-aspect-ratio="16-9"
-                        no-padding="true"
-                        .figureSettings="${figureSettings}"
-                    ></toujou-be-media-block>
-                </toujou-be-page-ce-element>
-            </toujou-bg-page-column-content>
+                    <tbeui-block-text .blockSettings="${textOneSettings}">
+                        <p slot="content">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+                    </tbeui-block-text>
+                </tbeui-page-ce-element-column>
+
+                <tbeui-page-ce-element-column slot="body">
+                    <tbeui-block-media slot="body" .blockSettings="${mediaSettings}" media-url="https://picsum.photos/600" media-alt="Nice image!"></tbeui-block-media>
+                </tbeui-page-ce-element-column>
+
+            </tbeui-page-ce-element>
+
+        </tbeui-page-column>
+
         </toujou-be-page-column>
     `;
 }
 
 export const TextWithMediaRight = Template.bind({});
-TextWithMediaRight.args = {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-}
