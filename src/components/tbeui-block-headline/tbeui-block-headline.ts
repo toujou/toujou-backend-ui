@@ -5,14 +5,14 @@ import { TbeuiSettingsGroupItem } from "@components/tbeui-settings-group/tbeui-s
 @customElement('tbeui-block-headline')
 export class TbeuiBlockHeadline extends LitElement {
     @property({ type: Array, attribute: 'block-settings' })
-    headlineSettings: TbeuiSettingsGroupItem[] = [];
+    blockSettings: TbeuiSettingsGroupItem[] = [];
 
     render() {
         return html`
             <tbeui-preview
                 class="preview"
                 preview-type="headline"
-                .settings="${this.headlineSettings}"
+                .settings="${this.blockSettings}"
             >
                 <slot name="content" slot="content"></slot>
             </tbeui-preview>

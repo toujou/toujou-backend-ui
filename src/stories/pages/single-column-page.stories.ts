@@ -13,7 +13,7 @@ export default {
 
 const headlinePreviewSettings: TbeuiSettingsGroupItem[] = [
     {
-        title: 'h1',
+        iconName: 'h1',
         value: 'h1 headline',
     }
 ];
@@ -88,7 +88,7 @@ const Template = () => {
                         slot="body"
                         image-aspect-ratio="16-9"
                         no-padding="true"
-                        .figureSettings="${figurePreviewSettings}"
+                        .blockSettings="${figurePreviewSettings}"
                     ></tbeui-block-media>
 
                     <tbeui-block-text

@@ -1,6 +1,5 @@
 import '../src/styles/storybook-styles.css';
 
-import '../src/components/tbeui-block-figure-group/tbeui-block-figure-group';
 import '../src/components/tbeui-block-headline/tbeui-block-headline';
 import '../src/components/tbeui-block-media/tbeui-block-media';
 import '../src/components/tbeui-block-text/tbeui-block-text';

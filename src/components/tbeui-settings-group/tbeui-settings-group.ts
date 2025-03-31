@@ -8,7 +8,7 @@ export enum TbeuiSettingsGroupItemType {
 }
 
 export interface TbeuiSettingsGroupItem {
-    title: string;
+    iconName: string;
     value: string;
     type?: TbeuiSettingsGroupItemType
 }
@@ -29,7 +29,7 @@ export class TbeuiSettingsGroup extends LitElement {
                     <li class="list__item">
                         <tbeui-icon
                             title="${item.value}"
-                            icon-name="${item.title}"
+                            icon-name="${item.iconName}"
                             icon-color="${item.type ? String(item.type) : TbeuiSettingsGroupItemType.Default}"
                         ></tbeui-icon>
                     </li>

@@ -8,7 +8,7 @@ export const TbeuiPreviewStyles = css`
 
         display: grid;
         grid-template-columns: auto 1fr;
-        grid-gap: var(--tbeui-spacing-xs);
+        grid-gap: var(--tbeui-spacing-s);
         height: fit-content;
         grid-template-rows: auto auto;
         border: var(--tbeui-preview-border);

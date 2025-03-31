@@ -18,26 +18,6 @@ export const TbeuiPageCeElementStyles = css`
         position: relative;
     }
 
-    :host([column-layout="50-50"]) {
-        --tbeui-element-grid-template-columns: 1fr 1fr;
-    }
-
-    :host([column-layout="33-66"]) {
-        --tbeui-element-grid-template-columns: 1fr 2fr;
-    }
-
-    :host([column-layout="66-33"]) {
-        --tbeui-element-grid-template-columns: 2fr 1fr;
-    }
-
-    :host([column-layout="33-33-33"]) {
-        --tbeui-element-grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    :host([column-layout="25-25-25-25"]) {
-        --tbeui-element-grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
     :host::before {
         content: '';
         width: var(--tbeui-border-width-default);
@@ -56,12 +36,34 @@ export const TbeuiPageCeElementStyles = css`
         grid-area: body;
         display: grid;
         grid-template-columns: var(--tbeui-element-grid-template-columns);
-        grid-gap: var(--tbeui-element-padding);
+        grid-gap: var(--tbeui-spacing-normal) var(--tbeui-spacing-l);
         padding: 0 var(--tbeui-element-padding);
         margin-top: var(--tbeui-spacing-s);
     }
 
     .body[hidden] {
         display: none;
+    }
+
+    @container (width > 420px) {
+        :host([column-layout="50-50"]) {
+            --tbeui-element-grid-template-columns: 1fr 1fr;
+        }
+
+        :host([column-layout="33-66"]) {
+            --tbeui-element-grid-template-columns: 1fr 2fr;
+        }
+
+        :host([column-layout="66-33"]) {
+            --tbeui-element-grid-template-columns: 2fr 1fr;
+        }
+
+        :host([column-layout="33-33-33"]) {
+            --tbeui-element-grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        :host([column-layout="25-25-25-25"]) {
+            --tbeui-element-grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
     }
 `;

@@ -1,17 +1,20 @@
 import { html, LitElement } from 'lit'
 import { customElement, property} from 'lit/decorators.js'
-import { TbeuiBlockFigureGroupSetting } from "@components/tbeui-block-figure-group/tbeui-block-figure-group.ts";
+import { TbeuiSettingsGroupItem } from "@components/tbeui-settings-group/tbeui-settings-group.ts";
+import { TbeuiBlockMediaStyles } from "@components/tbeui-block-media/tbeui-block-media.styles.ts";
 
 @customElement('tbeui-block-media')
 export class TbeuiBlockMedia extends LitElement {
+    static styles = [TbeuiBlockMediaStyles];
+
     @property({ type: String, attribute: 'image-aspect-ratio' })
     imageAspectRatio = 'auto';
 
-    @property({ type: Array, attribute: 'figure-settings' })
-    figureSettings: TbeuiBlockFigureGroupSetting[] = [];
-
     @property({ type: String, attribute: 'no-padding' })
     noPadding = false;
+
+    @property({ type: Array, attribute: 'block-settings' })
+    blockSettings: TbeuiSettingsGroupItem[] = [];
 
     render() {
         return html`
@@ -19,12 +22,13 @@ export class TbeuiBlockMedia extends LitElement {
                 class="preview"
                 no-border
                 ?no-padding="${this.noPadding}"
+                .settings="${this.blockSettings}"
             >
-                <tbeui-block-figure-group
-                    slot="content"
-                    image-aspect-ratio="${this.imageAspectRatio}"
-                    .figureSettings="${this.figureSettings}"
-                "></toujou-be-ce-block-figure-group>
+
+                <figure class="figure" slot="content">
+                    <img class="image" src="https://picsum.photos/600" alt=""/>
+                </figure>
+
             </tbeui-preview>
         `
     }

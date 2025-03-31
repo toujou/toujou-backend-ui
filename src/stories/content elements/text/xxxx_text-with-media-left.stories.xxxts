@@ -1,6 +1,5 @@
 import { html } from 'lit';
-import { Meta, StoryFn } from "@storybook/web-components";
-import { CeBlockSettingsBarItem } from "../../../components/ce-block-settings-bar/ce-block-settings-bar";
+import { Meta } from "@storybook/web-components";
 import { CeBlockFigureGroupSetting } from "@components/tbeui-block-figure-group/tbeui-block-figure-group.ts";
 import { TbeuiSettingsGroupItem } from "../../../components/tbeui-settings-group/tbeui-settings-group";
 
@@ -15,11 +14,6 @@ export default {
         text: { control: 'text' },
     },
 } as Meta<TextWithMediaLeftProps>;
-
-const textSettings: CeBlockSettingsBarItem[] = [
-    { title: 'Some settings', value: 'Some value' },
-    { title: 'Another setting' },
-];
 
 const figureSettings: CeBlockFigureGroupSetting[] = [
     {
@@ -45,17 +39,11 @@ const figureSettings: CeBlockFigureGroupSetting[] = [
     },
 ];
 
-const elementSettings: CeBlockSettingsBarItem[] = [
-    { title: 'Lightbox' },
-    { title: 'Autoslide', value: '6s' },
-    { title: 'Secondary divider' },
-];
-
 const listSettings: TbeuiSettingsGroupItem[] = [
     { title: 'ul', value: 'Unordered list' },
 ];
 
-const Template: StoryFn<TextWithMediaLeftProps> = (args: TextWithMediaLeftProps) => {
+const Template = () => {
     return html`
         <tbeui-page-column header-name="Content area">
             <tbeui-page-ce-element slot="content" header-text="Text with media left">
@@ -80,6 +68,3 @@ const Template: StoryFn<TextWithMediaLeftProps> = (args: TextWithMediaLeftProps)
 }
 
 export const TextWithMediaLeft = Template.bind({});
-TextWithMediaLeft.args = {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-}

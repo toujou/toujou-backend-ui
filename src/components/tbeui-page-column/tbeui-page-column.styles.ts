@@ -16,6 +16,7 @@ export const TbeuiPageColumnStyles = css`
         width: 100%;
         max-width: var(--tbeui-column-max-width);
         margin-inline: auto;
+        box-sizing: border-box;
     }
 
     :host(:not(:last-child)) {
