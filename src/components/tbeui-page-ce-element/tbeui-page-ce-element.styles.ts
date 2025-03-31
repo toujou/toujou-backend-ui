@@ -45,7 +45,7 @@ export const TbeuiPageCeElementStyles = css`
         display: none;
     }
 
-    @container (width > 420px) {
+    @container (width > 640px) {
         :host([column-layout="50-50"]) {
             --tbeui-element-grid-template-columns: 1fr 1fr;
         }
@@ -62,6 +62,12 @@ export const TbeuiPageCeElementStyles = css`
             --tbeui-element-grid-template-columns: 1fr 1fr 1fr;
         }
 
+        :host([column-layout="25-25-25-25"]) {
+            --tbeui-element-grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @container (width > 840px) {
         :host([column-layout="25-25-25-25"]) {
             --tbeui-element-grid-template-columns: 1fr 1fr 1fr 1fr;
         }

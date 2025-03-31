@@ -3,7 +3,7 @@ import { Meta } from "@storybook/web-components";
 import {
     TbeuiSettingsGroupItem,
     TbeuiSettingsGroupItemType
-} from "../../../components/tbeui-settings-group/tbeui-settings-group";
+} from "@components/tbeui-settings-group/tbeui-settings-group";
 
 export default {
     title: 'Content Elements / Media / Single Media',
@@ -27,8 +27,7 @@ const Template = () => {
                 element-name="Test image"
                 id="col-1"
             >
-                <tbeui-block-media slot="body" .blockSettings="${mediaSettings}">
-                </tbeui-block-media>
+                <tbeui-block-media slot="body" .blockSettings="${mediaSettings}"></tbeui-block-media>
 
             </tbeui-page-ce-element>
 
