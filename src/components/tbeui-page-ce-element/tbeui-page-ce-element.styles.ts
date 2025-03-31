@@ -8,7 +8,7 @@ export const TbeuiPageCeElementStyles = css`
 
         display: flex;
         flex-direction: column;
-        gap: var(--tbeui-element-padding) 0;
+        gap: 0;
         height: fit-content;
         background-color: var(--tbeui-color-white);
         padding: 0;
@@ -58,6 +58,7 @@ export const TbeuiPageCeElementStyles = css`
         grid-template-columns: var(--tbeui-element-grid-template-columns);
         grid-gap: var(--tbeui-element-padding);
         padding: 0 var(--tbeui-element-padding);
+        margin-top: var(--tbeui-spacing-s);
     }
 
     .body[hidden] {

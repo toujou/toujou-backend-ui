@@ -12,6 +12,7 @@ import '../src/components/tbeui-page-column/tbeui-page-column';
 import '../src/components/tbeui-page-columns/tbeui-page-columns';
 import '../src/components/tbeui-preview/tbeui-preview';
 import '../src/components/tbeui-settings-group/tbeui-settings-group';
+import '../src/components/tbeui-page-ce-settings-header/tbeui-page-ce-settings-header';
 
 export const parameters = {
     backgrounds: {
@@ -40,4 +41,4 @@ export const parameters = {
     },
 }
 
-console.clear();
+// console.clear();

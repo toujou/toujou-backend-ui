@@ -2,6 +2,9 @@ import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { TbeuiPageCeElementStyles } from "./tbeui-page-ce-element.styles.ts";
 import { TBEUI_PAGE_CE_HEADER_CHEVRON_CLICK } from "@constants//events.ts";
+import {
+    TbeuiPageCeSettingsHeaderItem
+} from "@components/tbeui-page-ce-settings-header/tbeui-page-ce-settings-header.ts";
 
 @customElement('tbeui-page-ce-element')
 export class TbeuiPageCeElement extends LitElement {
@@ -15,6 +18,9 @@ export class TbeuiPageCeElement extends LitElement {
 
     @property({ type: Boolean, attribute: 'body-is-visible', reflect: true })
     private _isBodyVisible = true;
+
+    @property({ type: Array })
+    settingsHeaderItems: TbeuiPageCeSettingsHeaderItem[] = [];
 
     private _bodyId = `ce-element-body-${this.id}`
 
@@ -30,6 +36,7 @@ export class TbeuiPageCeElement extends LitElement {
     }
 
     render() {
+        console.log('aaa', this.settingsHeaderItems)
         return html`
             <tbeui-page-ce-header
                 class="header"
@@ -38,6 +45,13 @@ export class TbeuiPageCeElement extends LitElement {
                 .ceBodyId="${this._bodyId}"
                 .ceBodyState="${this._isBodyVisible}"
             ></tbeui-page-ce-header>
+
+            ${this.settingsHeaderItems.length ? html`
+                <tbeui-page-ce-settings-header
+                    class="settings-header"
+                    .items="${this.settingsHeaderItems}"
+                ></tbeui-page-ce-settings-header>
+            ` : ''}
 
             <tbeui-page-ce-body
                 class="body"
