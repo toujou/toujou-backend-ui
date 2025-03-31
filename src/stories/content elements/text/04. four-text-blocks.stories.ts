@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import { TbeuiSettingsGroupItem } from "../../../components/tbeui-settings-group/tbeui-settings-group";
+import { TbeuiSettingsGroupItem } from "@components/tbeui-settings-group/tbeui-settings-group";
 
 export default {
     title: 'Content Elements / Text / Four Text Blocks',

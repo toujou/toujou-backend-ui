@@ -2,7 +2,7 @@ import { html } from 'lit';
 import { Meta, StoryFn } from "@storybook/web-components";
 import {
     TbeuiPageCeSettingsHeaderItem
-} from "../../../components/tbeui-page-ce-settings-header/tbeui-page-ce-settings-header";
+} from "@components/tbeui-page-ce-settings-header/tbeui-page-ce-settings-header";
 
 export default {
     title: 'Elements / Column',
