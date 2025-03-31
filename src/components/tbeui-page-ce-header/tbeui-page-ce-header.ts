@@ -1,6 +1,7 @@
 import { LitElement, html } from 'lit'
 import { customElement, property} from 'lit/decorators.js'
 import { TbeuiPageCeHeaderStyles } from "./tbeui-page-ce-header.styles.ts";
+import { TBEUI_PAGE_CE_HEADER_CHEVRON_CLICK } from "@constants/events.ts";
 
 @customElement('tbeui-page-ce-header')
 export class TbeuiPageCeHeader extends LitElement {
@@ -79,7 +80,7 @@ export class TbeuiPageCeHeader extends LitElement {
     }
 
     _onAccordionToggleClick = () => {
-        this.dispatchEvent(new CustomEvent('tbeui-element-toggle-click', {
+        this.dispatchEvent(new CustomEvent(TBEUI_PAGE_CE_HEADER_CHEVRON_CLICK, {
             bubbles: true,
             composed: true,
             detail: {

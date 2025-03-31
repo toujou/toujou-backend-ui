@@ -1,6 +1,7 @@
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { TbeuiPageCeElementStyles } from "./tbeui-page-ce-element.styles.ts";
+import { TBEUI_PAGE_CE_HEADER_CHEVRON_CLICK } from "@constants//events.ts";
 
 @customElement('tbeui-page-ce-element')
 export class TbeuiPageCeElement extends LitElement {
@@ -20,12 +21,12 @@ export class TbeuiPageCeElement extends LitElement {
     connectedCallback() {
         super.connectedCallback();
 
-        this.addEventListener('tbeui-element-toggle-click', this._handleToggleClick);
+        this.addEventListener(TBEUI_PAGE_CE_HEADER_CHEVRON_CLICK, this._handleToggleClick);
     }
 
     disconnectedCallback() {
         super.disconnectedCallback();
-        this.removeEventListener('tbeui-element-toggle-click', this._handleToggleClick);
+        this.removeEventListener(TBEUI_PAGE_CE_HEADER_CHEVRON_CLICK, this._handleToggleClick);
     }
 
     render() {

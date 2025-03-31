@@ -30,7 +30,8 @@
         ],
         "paths": {
             "@atoms/*": ["src/components/atoms/*"],
-            "@components/*": ["src/components/*"]
+            "@components/*": ["src/components/*"],
+            "@constants/*": ["src/constants/*"]
         }
     },
     "include": [

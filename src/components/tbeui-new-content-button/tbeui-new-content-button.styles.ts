@@ -11,14 +11,6 @@ export const TbeuiNewContentButtonStyles = css`
         z-index: 1;
     }
 
-    :host(:first-child) {
-        padding-top: var(--tbeui-spacing-xs);
-    }
-
-    :host(:last-child) {
-        padding-bottom: var(--tbeui-spacing-xs);
-    }
-
     :host::before {
         content: '';
         width: var(--tbeui-border-width-default);
