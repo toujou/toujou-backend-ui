@@ -1,6 +1,12 @@
 import { css } from 'lit';
 
 export const TbeuiPreviewStyles = css`
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
     :host {
         --tbeui-preview-border: none;
         --tbeui-preview-content-padding: 0;

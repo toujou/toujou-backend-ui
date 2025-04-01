@@ -1,6 +1,12 @@
 import { css } from 'lit';
 
 export const TbeuiPageColumnStyles = css`
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
     :host {
         --tbeui-column-dot-size: var(--tbeui-spacing-s);
         --tbeui-column-line-dot-color: var(--tbeui-color-font);

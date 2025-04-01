@@ -24,10 +24,54 @@ const Template = () => {
             <tbeui-page-ce-element
                 slot="content"
                 ctype-name="Single Media"
-                element-name="Test image"
+                element-name="Test image (default ratio)"
                 id="col-1"
             >
                 <tbeui-block-media slot="body" .blockSettings="${mediaSettings}" media-url="https://picsum.photos/600" media-alt="Nice image!"></tbeui-block-media>
+            </tbeui-page-ce-element>
+
+            <tbeui-new-content-button slot="content"></tbeui-new-content-button>
+
+            <tbeui-page-ce-element
+                slot="content"
+                ctype-name="Single Media"
+                element-name="Test image (ratio 16-9)"
+                id="col-1"
+            >
+                <tbeui-block-media slot="body" .blockSettings="${mediaSettings}" media-url="https://picsum.photos/600" media-alt="Nice image!" image-aspect-ratio="16-9"></tbeui-block-media>
+            </tbeui-page-ce-element>
+
+            <tbeui-new-content-button slot="content"></tbeui-new-content-button>
+
+            <tbeui-page-ce-element
+                slot="content"
+                ctype-name="Single Media"
+                element-name="Test image (ratio 4-3)"
+                id="col-1"
+            >
+                <tbeui-block-media slot="body" .blockSettings="${mediaSettings}" media-url="https://picsum.photos/600" media-alt="Nice image!" image-aspect-ratio="4-3"></tbeui-block-media>
+            </tbeui-page-ce-element>
+
+            <tbeui-new-content-button slot="content"></tbeui-new-content-button>
+
+            <tbeui-page-ce-element
+                slot="content"
+                ctype-name="Single Media"
+                element-name="Test image (ratio 3-2)"
+                id="col-1"
+            >
+                <tbeui-block-media slot="body" .blockSettings="${mediaSettings}" media-url="https://picsum.photos/600" media-alt="Nice image!" image-aspect-ratio="3-2"></tbeui-block-media>
+            </tbeui-page-ce-element>
+
+            <tbeui-new-content-button slot="content"></tbeui-new-content-button>
+
+            <tbeui-page-ce-element
+                slot="content"
+                ctype-name="Single Media"
+                element-name="Test image (ratio 3-1)"
+                id="col-1"
+            >
+                <tbeui-block-media slot="body" .blockSettings="${mediaSettings}" media-url="https://picsum.photos/600" media-alt="Nice image!" image-aspect-ratio="3-1"></tbeui-block-media>
             </tbeui-page-ce-element>
 
             <tbeui-new-content-button slot="content"></tbeui-new-content-button>

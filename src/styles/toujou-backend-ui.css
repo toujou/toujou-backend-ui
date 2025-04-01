@@ -7,5 +7,6 @@
 @import './variables/_type.css';
 @import './variables/_width.css';
 
+@import './globals/_reset.css';
 @import './globals/_type.css';
 

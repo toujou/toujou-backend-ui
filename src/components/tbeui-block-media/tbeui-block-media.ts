@@ -7,8 +7,8 @@ import { TbeuiBlockMediaStyles } from "@components/tbeui-block-media/tbeui-block
 export class TbeuiBlockMedia extends LitElement {
     static styles = [TbeuiBlockMediaStyles];
 
-    @property({ type: String, attribute: 'image-aspect-ratio' })
-    imageAspectRatio = 'auto';
+    @property({ type: String, attribute: 'image-aspect-ratio', reflect: true })
+    imageAspectRatio = '1';
 
     @property({ type: String, attribute: 'no-padding' })
     noPadding = false;

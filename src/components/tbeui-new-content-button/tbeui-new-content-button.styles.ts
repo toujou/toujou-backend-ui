@@ -1,6 +1,12 @@
 import { css } from 'lit';
 
 export const TbeuiNewContentButtonStyles = css`
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
     :host {
         --tbeui-new-content-button-button-color: var(--tbeui-color-primary);
 

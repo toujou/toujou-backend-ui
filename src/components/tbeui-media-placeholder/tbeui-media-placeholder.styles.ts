@@ -1,6 +1,12 @@
 import { css } from 'lit';
 
 export const TbeuiMediaPlaceholderStyles = css`
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
     :host {
         --tbeui-media-aspect-ratio: 1;
 

@@ -1,6 +1,12 @@
 import { css } from 'lit';
 
 export const TbeuiIconStyles = css`
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
     :host {
         --tbeui-icon-size: var(--tbeui-font-size-m);
         --tbeui-icon-color: var(--tbeui-color-font);

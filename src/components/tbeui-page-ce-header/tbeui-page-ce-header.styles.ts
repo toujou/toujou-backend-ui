@@ -1,6 +1,12 @@
 import { css } from 'lit';
 
 export const TbeuiPageCeHeaderStyles = css`
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
     :host {
         --tbeui-header-grab-area-width: var(--tbeui-spacing-normal);
         --tbeui-header-grab-area-icon-color: var(--tbeui-color-font-light);

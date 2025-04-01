@@ -1,6 +1,12 @@
 import { css } from "lit";
 
 export const TbeuiPageColumnsStyles = css`
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
     :host {
         display: flex;
         flex-direction: column;

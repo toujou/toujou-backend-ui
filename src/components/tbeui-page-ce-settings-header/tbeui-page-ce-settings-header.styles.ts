@@ -1,6 +1,12 @@
 import { css } from 'lit';
 
 export const TbeuiPageCeSettingsHeaderStyles = css`
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
     :host {
         display: flex;
     }
