@@ -18,5 +18,16 @@
     --tbeui-color-font-light: #5e5e60;
     --tbeui-color-font-dark: #111;
     --tbeui-color-white: #fff;
-    --tbeui-color-warning: #df5454;
+    --tbeui-color-warning-h: 21;
+    --tbeui-color-warning-s: 68%;
+    --tbeui-color-warning-l: 60%;
+    --tbeui-color-warning: hsl(var(--tbeui-color-warning-h), var(--tbeui-color-warning-s), var(--tbeui-color-warning-l));
+    --tbeui-color-warning-o-50: hsl(var(--tbeui-color-warning-h) var(--tbeui-color-warning-s) var(--tbeui-color-warning-l) / 50%);
+    --tbeui-color-warning-o-20: hsl(var(--tbeui-color-warning-h) var(--tbeui-color-warning-s) var(--tbeui-color-warning-l) / 20%);
+    --tbeui-color-info-h: 203;
+    --tbeui-color-info-s: 93%;
+    --tbeui-color-info-l: 47%;
+    --tbeui-color-info: hsl(var(--tbeui-color-info-h), var(--tbeui-color-info-s), var(--tbeui-color-info-l));
+    --tbeui-color-info-o-50: hsl(var(--tbeui-color-info-h) var(--tbeui-color-info-s) var(--tbeui-color-info-l) / 50%);
+    --tbeui-color-info-o-20: hsl(var(--tbeui-color-info-h) var(--tbeui-color-info-s) var(--tbeui-color-info-l) / 20%);
 }

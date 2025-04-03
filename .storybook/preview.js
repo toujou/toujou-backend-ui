@@ -3,6 +3,7 @@ import '../src/styles/storybook-styles.css';
 import '../src/components/tbeui-block-headline/tbeui-block-headline';
 import '../src/components/tbeui-block-media/tbeui-block-media';
 import '../src/components/tbeui-block-text/tbeui-block-text';
+import '../src/components/tbeui-drop-zone/tbeui-drop-zone';
 import '../src/components/tbeui-icon/tbeui-icon';
 import '../src/components/tbeui-media-placeholder/tbeui-media-placeholder';
 import '../src/components/tbeui-new-content-button/tbeui-new-content-button';
